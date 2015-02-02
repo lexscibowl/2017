@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<meta name="description" content="Lexington Science Bowl: a buzzer-speed and written-exam science competition for advanced middle school students.">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>LexSciBowl</title>
+	<link href='normalize.css' rel='stylesheet' type='text/css'/>
+	<link href='style.css' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+ok so do a thing like pennapps
+we'll have a big background image (people DOEing), 
+
+
+LexSciBowl
+science bowl doesn't have to end in March
+
+
+black on white is still easiest to read.
+white-on-dark-backgrounded title sections
+alternating with black-on-white text sections (which only are the middle half of the screen)
+	<div id="buttons-top">
+	</div>
+	<div id="buttons-bottom">
+		<a href="#about" class="btn">?<br>about</a>
+		<a href="#team" class="btn">@<br>team</a>
+		<a href="#sponsors" class="btn">$<br>sponsors</a>
+		<a href="#register" class="btn">[]<br>register</a>
+	</div>
+	<section id="title">
+		<header>LexSciBowl</header>
+		<article></article>
+	</section>
+	<section id="about">
+		<header></header>
+		<article>hai</article>
+	</section>
+	<section id="team">
+		<header></header>
+		<article></article>
+	</section>
+	<section>
+		<header></header>
+		<article></article>
+		sponsors
+		divided into 3x3 grid: middle one is just ($)/sponsors, bottom one is a quick thankyou,
+			the top is the highest sponsor and the sides are all the others
+	</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+<script>
+$(document).ready(function(){
+	var $w=$('body');
+	
+	//Smooth scrolling.
+	//Adapted from //http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+		
+	    var target = this.hash;
+	    var $target = $(target);
+		
+	    $w.stop().animate({
+	        'scrollTop': $w.scrollTop() + $target.offset().top - $w.offset().top
+	    }, 500, 'swing', function () {
+	        window.location.hash = target;
+	    });
+		
+		return false;
+	});
+	//end
+</script>
+</body>
+</html>

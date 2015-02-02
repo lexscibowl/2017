@@ -1,71 +1,86 @@
-<!DOCTYPE html>
-<html lang='en'>
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-	<meta name="description" content="Lexington Science Bowl: a buzzer-speed and written-exam science competition for advanced middle school students.">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<title>LexSciBowl</title>
-	<link href='normalize.css' rel='stylesheet' type='text/css'/>
-	<link href='style.css' rel='stylesheet' type='text/css'/>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-black on white is still easiest to read.
-white-on-dark-backgrounded title sections
-alternating with black-on-white text sections (which only are the middle half of the screen)
-	<div id="buttons-top">
-	</div>
-	<div id="buttons-bottom">
-		<a href="#about" class="btn">?<br>about</a>
-		<a href="#team" class="btn">@<br>team</a>
-		<a href="#sponsors" class="btn">$<br>sponsors</a>
-		<a href="#register" class="btn">[]<br>register</a>
-	</div>
-	<section id="title">
-		<header>LexSciBowl</header>
-		<article></article>
-	</section>
-	<section id="about">
-		<header></header>
-		<article>hai</article>
-	</section>
-	<section id="team">
-		<header></header>
-		<article></article>
-	</section>
-	<section>
-		<header></header>
-		<article></article>
-		sponsors
-		divided into 3x3 grid: middle one is just ($)/sponsors, bottom one is a quick thankyou,
-			the top is the highest sponsor and the sides are all the others
-	</section>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
-<script>
-$(document).ready(function(){
-	var $w=$('body');
+	<nav>
+		<a href="#home">
+			<i class="fa fa-home"></i>
+			home
+		</a>
+		<a href="#contest">
+			contest
+		</a>
+		<a href="#faq">
+			faq
+		</a>
+		<a href="#team">
+			team
+		</a>
+		<a href="#sponsors">sponsors</a>
+		<a href="#register">register</a>
+	</nav>
 	
-	//Smooth scrolling.
-	//Adapted from //http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
+	<div id="main">
+		<header>
+			<aside>contact buttons in top corner</aside>
+			<h1>LexSciBowl</h1>
+			<p>science bowl doesn't end in March</p>
+			<p>A student-run middle school science bowl and olympiad</p>
+			<p>May 16, 2015 @ <a href="">LHS</a>.</p>
+		</header>
 		
-	    var target = this.hash;
-	    var $target = $(target);
+		<section>
+			<header></header>
+			<div></div>
+			<div></div>
+			<div></div>
+		</section>
 		
-	    $w.stop().animate({
-	        'scrollTop': $w.scrollTop() + $target.offset().top - $w.offset().top
-	    }, 500, 'swing', function () {
-	        window.location.hash = target;
-	    });
+		<footer>
+			Made with &lt;3 in Lexington.
+		</footer>
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="jquery-1.11.2.min.js"><\/script>')</script>
+	
+	<!--
+	<script>
+		(function(L,e,x,S,c,i,B,o,w,l){L['GoogleAnalyticsObject']=c;L[c]=L[c]||function(){
+		(L[c].q=L[c].q||[]).push(arguments)},L[c].L=1*new Date();i=e.createElement(x),
+		B=e.getElementsByTagName(x)[0];i.async=1;i.src=S;B.parentNode.insertBefore(i,B)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		
-		return false;
-	});
-	//end
-</script>
+		ga('create', 'UA-59199143-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	-->
 </body>
+<!--
+Individual boxes:
+
+Clive Chan
+founder, co-coordinator
+
+Bharat Srirangam
+co-coordinator
+
+Nicholas Gould
+faculty advisor
+...
+
+Text should NEVER take up the whole width of the screen.
+Most of it should be black on white.
+-->
 </html>
