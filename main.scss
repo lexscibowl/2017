@@ -1,8 +1,35 @@
 /*Main LexSciBowl Sass-CSS Stylesheet*/
 
+$videobg_placeholder: gray;
+$blue: #00ffff;
+$yellow: #ffff00;
+
+$contest: #ff6666;
+$faq: #ff9933;
+$team: #ffcc00;
+$sponsors: #339933;
+$register: #000099;
+
+//Merriweather|Dosis|Poiret+One
+$FFallback: "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+$FMainTitle: "Poiret One", $FFallback; //add a special flourish to the i in LexSciBowl?
+$FSubtitle: "Quicksand", $FFallback;
+$FNav: "Raleway", $FFallback;
+$FSectionTitle: "Dosis", $FFallback;
+
+
+.fa-fb-f:before {
+  content: "\f09a";
+}
+
+
+.lsb.l{color: $blue;}
+.lsb.s{color: $yellow;}
+.lsb.b{color: white;}
+
 nav{
 	position: fixed;
-	top: 0; bottom: 0; left: 0; width: 100px;
+	top: 0; bottom: 0; left: 0; width: 50px;
 	
 	display: flex;
 	flex-direction: column;
@@ -20,7 +47,7 @@ nav a{
 	text-decoration: none;
 	color: #fff;
 	font-size: 10pt;
-	font-family: "Raleway", "Segoe UI", "Open Sans", Arial, sans-serif;
+	font-family: $FNav;
 
 	background-color: transparent;
 	border: solid 1px #fff;
@@ -44,5 +71,93 @@ nav a{
 }
 
 #main{
-
+	position: fixed;
+	top: 0; bottom: 0; left: 50px; right: 0px;
+	overflow-y: scroll;
 }
+#main>header{
+	height: 100%;
+	background-color: $videobg_placeholder;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#titlebox{
+	color: white;
+}
+#contactbuttons{
+	@media all and (max-width: 600px){display: none;}
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	font-size: 24pt;
+	i.fa{margin: 5px;}
+}
+h1, h2, h3, .titlecaption1, .titlecaption2{
+	display:block;
+	font-family: $FSubtitle;
+	text-align: center;
+	margin: 0;
+}
+h1{
+	font-family: $FMainTitle;
+	letter-spacing: 0.05em;
+	@media all and (max-width: 600px){font-size: 3.1em;}
+	@media all and (min-width: 600px){font-size: 6.5em;}
+}
+h1 small{
+	font-size: 0.85em;
+}
+.titlecaption1{
+	margin-top: -0.1em;
+	@media all and (max-width: 600px){font-size: 1.2em;}
+	@media all and (min-width: 600px){font-size: 1.6em;}
+}
+.titlecaption2{
+	margin-top: 0.2em;
+	@media all and (max-width: 600px){font-size: 1.5em;}
+	@media all and (min-width: 600px){font-size: 2.0em;}
+}
+
+section{
+	height: 100%;
+	text-align: center;
+	background-color: $videobg_placeholder;
+
+	header{ //rem instead of em, since rem is relative to HTML tag. 12pt = 16px = 1em = 100%.
+		width: 100%;
+		@media all and (max-height: 500px){height: 100px; font-size: 2.5em;}
+		@media all and (min-height: 500px){height: 200px; font-size: 5em;}
+		color: white;
+		line-height: 1.8em;
+		font-family: $FSectionTitle;
+
+		p{
+			line-height: 1.7em;
+			margin: -1em 0 0 0;
+			font-size: 0.5em;
+		}
+	}
+
+	.content{
+		width: 70%; margin-left: 10%;
+		background-color: white;
+		text-align: left;
+		padding: 5%;
+		font-size: 1.5em;
+		min-height: 20%;
+	}
+	.content .contentbox{
+		width: 25%;
+		background-color: black;
+
+	}
+}
+
+#contest header{background-color: $contest;}
+#faq header{background-color: $faq;}
+#team header{background-color: $team;}
+#sponsors header{background-color: $sponsors;}
+#register header{background-color: $register;}
