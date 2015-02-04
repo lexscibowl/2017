@@ -12,15 +12,26 @@ $register: #000099;
 
 //Merriweather|Dosis|Poiret+One
 $FFallback: "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-$FMainTitle: "Poiret One", $FFallback; //add a special flourish to the i in LexSciBowl?
+$FMainTitle: "Intro", $FFallback; //add a special flourish to the i in LexSciBowl?
 $FSubtitle: "Quicksand", $FFallback;
 $FNav: "Raleway", $FFallback;
 $FSectionTitle: "Dosis", $FFallback;
 
 
-.fa-fb-f:before {
-  content: "\f09a";
+.fa-fb-f:before { //work around AdBlock
+	content: "\f09a";
 }
+@font-face { //fontsquirrel recommendation
+	font-family: 'Intro';
+	font-style: normal;
+	font-weight: normal;
+	src: url('Intro.eot');
+	src: url('Intro.eot?#iefix') format('embedded-opentype'),
+		url('Intro.ttf.woff') format('woff'),
+		url('Intro.ttf.svg') format('svg');
+}
+
+
 
 
 .lsb.l{color: $blue;}
@@ -106,9 +117,7 @@ h1{
 	letter-spacing: 0.05em;
 	@media all and (max-width: 600px){font-size: 3.1em;}
 	@media all and (min-width: 600px){font-size: 6.5em;}
-}
-h1 small{
-	font-size: 0.85em;
+	small{font-size: 5em;}
 }
 .titlecaption1{
 	margin-top: -0.1em;
