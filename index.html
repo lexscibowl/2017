@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<meta name="description" content="A student-run middle school science bowl and olympiad">
+
+	<!--
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	-->
+
 	<title>LexSciBowl</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -26,7 +33,7 @@
 		<a href="#sponsors">sponsors</a>
 		<a href="#register">register</a>
 	</nav>
-	
+
 	<div id="main">
 		<header id="home">
 			<aside id="contactbuttons">
@@ -40,25 +47,20 @@
 			</div>
 		</header>
 
-		<section id="contest">
-			<header>Contest<p>Being a baller</p></header>
-			<div class="content">Bla</div>
-		</section>
-
 		<section id="faq">
-			<header>FAQ<p></p></header>
+			<header>FAQ<p>Stuff you might need to know</p></header>
 			<div class="content">
-				<div class="contentbox"></div>
+				<div class="contentbox">what when where $10</div>
 			</div>
 		</section>
 
 		<section id="team">
-			<header>Team<p></p></header>
+			<header>Team<p>A lot of awesome volunteers</p></header>
 			<div class="content">Bla</div>
 		</section>
 
 		<section id="sponsors">
-			<header>Sponsors<p></p></header>
+			<header>Sponsors<p>The companies that make LexSciBowl possible</p></header>
 			<div class="content">Bla</div>
 		</section>
 
@@ -66,12 +68,35 @@
 			<header>Register<p></p></header>
 			<div class="content">Bla</div>
 		</section>
-		
-		<!--footer>Made with &lt;3 in Lexington.</footer-->
 	</div>
+	
+	<!--footer>Made with &lt;3 in Lexington.</footer-->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="jquery-1.11.2.min.js"><\/script>')</script>
+
+	<script>
+	$(document).ready(function(){
+		var $w=$('body');
+		
+		//Smooth scrolling.
+		//Adapted from //http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
+		$('a[href^="#"]').on('click',function (e) {
+		    e.preventDefault();
+			
+		    var target = this.hash;
+		    var $target = $(target);
+			
+		    $w.stop().animate({
+		        'scrollTop': $w.scrollTop() + $target.offset().top - $w.offset().top
+		    }, 500, 'swing', function () {
+		        window.location.hash = target;
+		    });
+			
+			return false;
+		});
+		//end
+	</script>
 	
 	<!--
 	<script>

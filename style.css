@@ -2,6 +2,12 @@
 .fa-fb-f:before {
   content: "\f09a"; }
 
+@font-face {
+  font-family: 'Intro';
+  font-style: normal;
+  font-weight: normal;
+  src: url("Intro.eot");
+  src: url("Intro.eot?#iefix") format("embedded-opentype"), url("Intro.ttf.woff") format("woff"), url("Intro.ttf.svg") format("svg"); }
 .lsb.l {
   color: #00ffff; }
 
@@ -16,7 +22,7 @@ nav {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 50px;
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,17 +36,17 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-size: 10pt;
-  font-family: "Raleway", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+  font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
   background-color: transparent;
   border: solid 1px #fff;
   border-radius: 50%;
   margin: 10px;
-  height: 40px;
-  width: 40px;
+  height: 70px;
+  width: 70px;
   transition: all 0.5s; }
   nav a.selected {
-    height: 50px;
-    width: 50px; }
+    height: 100px;
+    width: 100px; }
   nav a i.fa {
     display: block; }
   nav a:hover {
@@ -75,7 +81,22 @@ nav a {
     #contactbuttons {
       display: none; } }
   #contactbuttons i.fa {
-    margin: 5px; }
+    display: inline-block;
+    width: 24pt;
+    height: 24pt;
+    padding: 0px;
+    border-radius: 2px;
+    margin: 5px;
+    transition: all 0.3s;
+    color: #666;
+    text-align: center;
+    vertical-align: baseline; }
+  #contactbuttons i.fa-fb-f:hover {
+    background-color: #3B5998;
+    color: white; }
+  #contactbuttons i.fa-github:hover {
+    background-color: white;
+    color: black; }
 
 h1, h2, h3, .titlecaption1, .titlecaption2 {
   display: block;
@@ -91,10 +112,9 @@ h1 {
       font-size: 3.1em; } }
   @media all and (min-width: 600px) {
     h1 {
-      font-size: 6.5em; } }
-
-h1 small {
-  font-size: 0.85em; }
+      font-size: 7.2em; } }
+  h1 small {
+    font-size: 0.9em; }
 
 .titlecaption1 {
   margin-top: -0.1em; }

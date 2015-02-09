@@ -12,9 +12,9 @@ $register: #000099;
 
 //Merriweather|Dosis|Poiret+One
 $FFallback: "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-$FMainTitle: "Intro", $FFallback; //add a special flourish to the i in LexSciBowl?
+$FMainTitle: "Poiret One", $FFallback; //add a special flourish to the i in LexSciBowl?
 $FSubtitle: "Quicksand", $FFallback;
-$FNav: "Raleway", $FFallback;
+$FNav: "Quicksand", $FFallback;
 $FSectionTitle: "Dosis", $FFallback;
 
 
@@ -40,7 +40,7 @@ $FSectionTitle: "Dosis", $FFallback;
 
 nav{
 	position: fixed;
-	top: 0; bottom: 0; left: 0; width: 50px;
+	top: 0; bottom: 0; left: 0; width: 100px;
 	
 	display: flex;
 	flex-direction: column;
@@ -65,9 +65,9 @@ nav a{
 	border-radius: 50%;
 	margin: 10px;
 
-	height:40px; width: 40px;
+	height: 70px; width: 70px;
 	&.selected{
-		height: 50px; width: 50px;
+		height: 100px; width: 100px;
 	}
 
 	i.fa{
@@ -104,7 +104,18 @@ nav a{
 	top: 5%;
 	right: 5%;
 	font-size: 24pt;
-	i.fa{margin: 5px;}
+	i.fa{
+		display: inline-block;
+		width: 24pt; height: 24pt; padding: 0px;
+		border-radius: 2px;
+		margin: 5px;
+		transition: all 0.3s;
+		color: #666;
+		text-align:center;
+		vertical-align: baseline;
+	}
+	i.fa-fb-f:hover{background-color: #3B5998; color: white;}
+	i.fa-github:hover{background-color:white; color:black;}
 }
 h1, h2, h3, .titlecaption1, .titlecaption2{
 	display:block;
@@ -116,8 +127,8 @@ h1{
 	font-family: $FMainTitle;
 	letter-spacing: 0.05em;
 	@media all and (max-width: 600px){font-size: 3.1em;}
-	@media all and (min-width: 600px){font-size: 6.5em;}
-	small{font-size: 5em;}
+	@media all and (min-width: 600px){font-size: 7.2em;}
+	small{font-size: 0.9em;}
 }
 .titlecaption1{
 	margin-top: -0.1em;
