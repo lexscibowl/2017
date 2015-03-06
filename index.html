@@ -23,54 +23,59 @@
 	<!--Video goes here-->
 
 	<nav>
-		<a href="#home">
-			<i class="fa fa-home"></i>
-			home
-		</a>
-		<a href="#contest">contest</a>
-		<a href="#faq">faq</a>
-		<a href="#team">team</a>
-		<a href="#sponsors">sponsors</a>
-		<a href="#register">register</a>
+		<a href="#home" class="selected">home</a><!--
+		--><a href="#faq">faq</a><!--
+		maybe contest here
+		--><a href="#team">team</a><!--
+		--><a href="#sponsors">sponsors</a><!--
+		--><a href="#register">register</a>
 	</nav>
 
-	<div id="main">
-		<header id="home">
-			<aside id="contactbuttons">
-				<i class="fa fa-fb-f"></i>
-				<i class="fa fa-github"></i>
-			</aside>
-			<div id="titlebox">
-				<h1><span class="lsb l"><small>L</small>ex</span><span class="lsb s"><small>S</small>ci</span><span class="lsb b"><small>B</small>ow<small>l</small></span></h1>
-				<p class="titlecaption1">A student-run middle school science bowl and olympiad</p>
-				<b class="titlecaption2">May 16, 2015 @ <a href="https://www.google.com/maps/place/Lexington+High+School/">LHS</a>.</b>
+	<header id="home">
+		<aside id="contactbuttons">
+			<i class="fa fa-fb-f"></i>
+			<i class="fa fa-github"></i>
+		</aside>
+		<div id="titlebox">
+			<h1><span class="lsb l"><small>L</small>ex</span><span class="lsb s"><small>S</small>ci</span><span class="lsb b"><small>B</small>ow<small>l</small></span></h1>
+			<p class="titlecaption1">A student-run middle school science bowl and olympiad</p>
+			<b class="titlecaption2">May 16, 2015 @ <a href="https://www.google.com/maps/place/Lexington+High+School/">LHS</a>.</b>
+		</div>
+	</header>
+
+	<section id="faq">
+		<header>FAQ<p>Stuff you might need to know</p></header>
+		<div class="content">
+			<div class="box"><h3>What is LexSciBowl?</h3>
+				<p>
+				LexSciBowl is a new middle school science competition, in which teams of 4 compete in both individual written competition
+				</p>
 			</div>
-		</header>
+			<div class="box"><h3>when where</h3>
 
-		<section id="faq">
-			<header>FAQ<p>Stuff you might need to know</p></header>
-			<div class="content">
-				<div class="contentbox">what when where $10</div>
 			</div>
-		</section>
+			<div class="box"><h3>$10</h3></div>
+			<div class="box"><h3>resources</h3></div>
+			registration - limit 80 - uh outreach needs to be good - email to principals and sciteachers
+		</div>
+	</section>
 
-		<section id="team">
-			<header>Team<p>A lot of awesome volunteers</p></header>
-			<div class="content">Bla</div>
-		</section>
+	<section id="team">
+		<header>Team<p>We love our volunteers</p></header>
+		<div class="content">Bla</div>
+	</section>
 
-		<section id="sponsors">
-			<header>Sponsors<p>The companies that make LexSciBowl possible</p></header>
-			<div class="content">Bla</div>
-		</section>
+	<section id="sponsors">
+		<header>Sponsors<p>The companies that make LexSciBowl possible</p></header>
+		<div class="content">Bla</div>
+	</section>
 
-		<section id="register">
-			<header>Register<p>The sooner the better. &lt;3</p></header>
-			<div class="content">Bla</div>
-		</section>
-	</div>
+	<section id="register">
+		<header>Register<p>It'll be awesome, we promise</p></header>
+		<div class="content">Bla</div>
+	</section>
 	
-	<!--footer>Made with &lt;3 in Lexington.</footer-->
+	<footer>Made with &lt;3 in Lexington.</footer>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="jquery-1.11.2.min.js"><\/script>')</script>
@@ -88,17 +93,17 @@
 		    var $target = $(target);
 			
 		    $w.stop().animate({
-		        'scrollTop': $w.scrollTop() + $target.offset().top - $w.offset().top
+		        'scrollTop': /*$w.scrollTop() +*/ $target.offset().top - $w.offset().top
 		    }, 500, 'swing', function () {
 		        window.location.hash = target;
 		    });
 			
 			return false;
 		});
-		//end
+	});
 	</script>
 	
-	<!--
+	<!--Already set, just uncomment once pushing to production
 	<script>
 		(function(L,e,x,S,c,i,B,o,w,l){L['GoogleAnalyticsObject']=c;L[c]=L[c]||function(){
 		(L[c].q=L[c].q||[]).push(arguments)},L[c].L=1*new Date();i=e.createElement(x),
