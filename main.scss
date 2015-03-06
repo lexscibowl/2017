@@ -20,12 +20,7 @@ $FMainTitle: "Poiret One", $FFallback; //add a special flourish to the i in LexS
 $FSubtitle: "Quicksand", $FFallback;
 $FNav: "Quicksand", $FFallback;
 $FSectionTitle: "Dosis", $FFallback;
-
-
-.fa-fb-f:before { //work around AdBlock
-	content: "\f09a";
-}
-@font-face { //fontsquirrel recommendation
+/*@font-face { //fontsquirrel recommendation
 	font-family: 'Intro';
 	font-style: normal;
 	font-weight: normal;
@@ -33,6 +28,11 @@ $FSectionTitle: "Dosis", $FFallback;
 	src: url('Intro.eot?#iefix') format('embedded-opentype'),
 		url('Intro.ttf.woff') format('woff'),
 		url('Intro.ttf.svg') format('svg');
+}*/
+
+
+.fa-fb-f:before { //work around AdBlock
+	content: "\f09a";
 }
 ::selection{
 	//background-color: rgba(0,0,0,10);

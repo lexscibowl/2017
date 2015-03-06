@@ -1,13 +1,16 @@
 /*Main LexSciBowl Sass-CSS Stylesheet*/
+/*@font-face { //fontsquirrel recommendation
+	font-family: 'Intro';
+	font-style: normal;
+	font-weight: normal;
+	src: url('Intro.eot');
+	src: url('Intro.eot?#iefix') format('embedded-opentype'),
+		url('Intro.ttf.woff') format('woff'),
+		url('Intro.ttf.svg') format('svg');
+}*/
 .fa-fb-f:before {
   content: "\f09a"; }
 
-@font-face {
-  font-family: 'Intro';
-  font-style: normal;
-  font-weight: normal;
-  src: url("Intro.eot");
-  src: url("Intro.eot?#iefix") format("embedded-opentype"), url("Intro.ttf.woff") format("woff"), url("Intro.ttf.svg") format("svg"); }
 .lsb.l {
   color: #52f; }
 
