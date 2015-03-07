@@ -69,11 +69,11 @@ nav a {
     nav a {
       display: inline-block;
       width: auto; } }
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     nav a {
-      font-size: 10pt;
+      font-size: 11pt;
       padding: 5px 5px;
-      height: 18px; } }
+      height: 22px; } }
 
 body > header {
   height: 100%;
@@ -158,10 +158,14 @@ section {
     color: white;
     line-height: 1.8em;
     font-family: "Dosis", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif; }
-    @media (max-height: 600px) {
+    @media (max-width: 900px) {
       section header {
         height: 100px;
         font-size: 2.5em; } }
+    @media (max-width: 400px) {
+      section header {
+        height: 80px;
+        font-size: 2.0em; } }
     section header p {
       line-height: 1.7em;
       margin: -1em 0 0 0;

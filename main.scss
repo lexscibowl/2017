@@ -38,8 +38,6 @@ $FSectionTitle: "Dosis", $FFallback;
 	//background-color: rgba(0,0,0,10);
 }
 
-
-
 .lsb.l{color: $blue;}
 .lsb.s{color: $yellow;}
 .lsb.b{color: $white;}
@@ -95,10 +93,10 @@ nav a{
 		display: inline-block;
 		width: auto;
 	}
-	@media (max-width: 600px){
-		font-size: 10pt;
+	@media (max-width: 500px){
+		font-size: 11pt;
 		padding: 5px 5px;
-		height: 18px;
+		height: 22px;
 	}
 }
 
@@ -166,7 +164,8 @@ section{
 
 	header{ //rem instead of em, since rem is relative to HTML tag. 12pt = 16px = 1em = 100%.
 		width: 100%;
-		@media (max-height: 600px){height: 100px; font-size: 2.5em;}
+		@media (max-width: 900px){height: 100px; font-size: 2.5em;}
+		@media (max-width: 400px){height: 80px; font-size: 2.0em;}
 		height: 200px; font-size: 5em;
 
 		color: white;
