@@ -14,13 +14,15 @@
 
 	<title>LexSciBowl</title>
 
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Raleway|Quicksand:400,700|Dosis|Poiret+One' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="style.css">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<!--Video goes here-->
+	
+	<img id="bgimage" src="img/P1012657 [good].JPG">
 
 	<nav>
 		<a href="#home" class="selected">home</a><!--
@@ -77,8 +79,36 @@
 	
 	<footer>Made with &lt;3 in Lexington.</footer>
 
+	<!-- BigVideo Dependencies -->
+	<!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="bower_components/jquery/jquery.min.js"><\/script>')</script>
+    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+    <script src="//vjs.zencdn.net/4.3/video.js"></script>-->
+
+    <!-- BigVideo -->
+    <!--script src="bower_components/BigVideo/lib/bigvideo.js"></script>-->
+    
+    <!-- Demo -->
+    <!--<script>
+        var BV;
+	    $(function() {
+            
+            // initialize BigVideo
+            BV = new $.BigVideo();
+			BV.init();
+			BV.show('http://vjs.zencdn.net/v/oceans.mp4',{ambient:true});
+
+            // Playlist button click starts video
+            $('.playlist-btn').on('click', function(e) {
+                e.preventDefault();
+                BV.show($(this).attr('href'));
+            });
+	    });
+    </script>-->
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="jquery-1.11.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
 
 	<script>
 	$(document).ready(function(){
@@ -100,6 +130,26 @@
 			
 			return false;
 		});
+		
+		$w.scroll(function(e){
+			//parallax
+			$("#bgimage").css('top','0 '+(1600-$w.scrollTop()/3)+'px');
+			
+			//highlighting navbar items
+			//cmp with tops of each anchorlink.
+			$a=$(".anchor");
+			$a.each(function(){
+				if($(this).offset().top > -200){//~Half (min-)height of .content
+					var $new=$('#navbar a[href^="#'+$(this).attr("id")+'"]');
+					if(!$new.hasClass("hover")){//Only if it's doesn't already have the class. Speed.
+						ga('send', 'event', $(this).attr("id"), 'scroll', 'nav');//Hey, GA! They scrolled down!
+						$('#navbar a[href^="#"]').removeClass("hover");
+						$new.addClass("hover");
+					}
+					return false;
+				}
+			});
+		}).scroll();//To align the background-position and highlight the first nav item, even before any scrolling happens.
 	});
 	</script>
 	
