@@ -111,17 +111,25 @@ body > header {
     width: 24pt;
     height: 24pt;
     padding: 0px;
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 5px;
     transition: all 0.3s;
     color: #666;
     text-align: center; }
+  #contactbuttons i.fa-envelope-o {
+    padding: 0px 4px 4px 3px; }
+  #contactbuttons i.fa-envelope-o:before {
+    position: relative;
+    top: 1px; }
   #contactbuttons i.fa-fb-f:before {
     position: relative;
     top: 2px; }
   #contactbuttons i.fa-github:before {
     position: relative;
     top: 1px; }
+  #contactbuttons i.fa-envelope-o:hover {
+    background-color: gray;
+    color: white; }
   #contactbuttons i.fa-fb-f:hover {
     background-color: #3B5998;
     color: white; }
@@ -147,17 +155,19 @@ h1 {
 
 .titlecaption1 {
   margin-top: -0.1em;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  font-weight: 700; }
   @media (min-width: 600px) {
     .titlecaption1 {
       font-size: 1.6em; } }
 
 .titlecaption2 {
   margin-top: 0.2em;
-  font-size: 1.5em; }
+  font-size: 1.8em;
+  font-weight: 400; }
   @media (min-width: 600px) {
     .titlecaption2 {
-      font-size: 2.0em; } }
+      font-size: 2.7em; } }
 
 section {
   height: 100%;

@@ -35,13 +35,14 @@
 
 	<header id="home">
 		<aside id="contactbuttons">
-			<i class="fa fa-fb-f"></i>
-			<i class="fa fa-github"></i>
+			<a href="mailto:info@lexscibowl.org"><i class="fa fa-envelope-o"></i></a>
+			<a href="https://www.facebook.com/lexscibowl"><i class="fa fa-fb-f"></i></a>
+			<a href="https://github.com/mathnerd3141/LexSciBowl"><i class="fa fa-github"></i></a>
 		</aside>
 		<div id="titlebox">
 			<h1><span class="lsb l"><small>L</small>ex</span><span class="lsb s"><small>S</small>ci</span><span class="lsb b"><small>B</small>ow<small>l</small></span></h1>
 			<p class="titlecaption1">A student-run middle school science bowl and olympiad</p>
-			<b class="titlecaption2">May 16, 2015 @ <a href="https://www.google.com/maps/place/Lexington+High+School/">LHS</a>.</b>
+			<p class="titlecaption2">May 16, 2015 @ <a href="https://www.google.com/maps/place/Lexington+High+School/">LHS</a>.</p>
 		</div>
 	</header>
 
@@ -112,7 +113,7 @@
 
 	<script>
 	$(document).ready(function(){
-		var $w=$('body');
+		var $w=$('document');
 		
 		//Smooth scrolling.
 		//Adapted from //http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
@@ -133,7 +134,8 @@
 		
 		$w.scroll(function(e){
 			//parallax
-			$("#bgimage").css('top','0 '+(1600-$w.scrollTop()/3)+'px');
+			console.log("a");
+			$("#bgimage").css('top',(-$w.scrollTop()/3)+'px');
 			
 			//highlighting navbar items
 			//cmp with tops of each anchorlink.
