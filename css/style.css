@@ -41,7 +41,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1000;
-  width: 100%;
+  height: 200%;
+  min-width: 100%;
   opacity: 0.5; }
 
 nav {
@@ -128,13 +129,13 @@ body > header {
     position: relative;
     top: 1px; }
   #contactbuttons i.fa-envelope-o:hover {
-    background-color: gray;
+    background-color: #666;
     color: white; }
   #contactbuttons i.fa-fb-f:hover {
     background-color: #3B5998;
     color: white; }
   #contactbuttons i.fa-github:hover {
-    background-color: black;
+    background-color: #000;
     color: white; }
 
 h1, h2, h3, .titlecaption1, .titlecaption2 {
@@ -167,7 +168,7 @@ h1 {
   font-weight: 400; }
   @media (min-width: 600px) {
     .titlecaption2 {
-      font-size: 2.7em; } }
+      font-size: 3em; } }
 
 section {
   height: 100%;
@@ -195,36 +196,47 @@ section {
     position: absolute;
     left: 200px;
     right: 200px;
-    text-align: center;
     vertical-align: top;
     font-size: 1.3em;
-    border: solid 1px #000; }
+    border: solid 1px #000;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines; }
     @media (max-width: 900px) {
       section .content {
         left: 0px;
         right: 0px; } }
+    section .content .stretch {
+      width: 100%;
+      display: inline-block;
+      font-size: 0;
+      line-height: 0; }
     section .content .box {
-      display: block;
       background-color: white;
-      margin: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      border: solid 3px #000; }
-      @media (min-width: 600px) {
-        section .content .box {
-          display: inline-block;
-          max-width: 300px;
-          width: 35%; } }
+      padding: 10px; }
       @media (min-width: 900px) {
         section .content .box {
+          border: solid 3px #000;
+          border-radius: 5px;
+          margin: 10px;
+          max-width: 200px;
+          vertical-align: top;
           display: inline-block;
-          max-width: 300px;
-          width: 25%; } }
+          *display: inline;
+          zoom: 1; } }
+      @media (max-width: 900px) {
+        section .content .box {
+          border: solid 1px #000;
+          margin: 10px 11px 10px 9px;
+          display: block;
+          width: 100%; } }
       section .content .box h3 {
         font-size: 1em; }
       section .content .box p {
         text-align: left;
-        text-indent: 10px; }
+        text-indent: 10px;
+        font-family: Georgia, serif;
+        font-size: 0.8em; }
 
 #contest header {
   background-color: #f66; }
@@ -242,6 +254,9 @@ section {
   background-color: #009; }
 
 footer {
-  text-align: center; }
+  text-align: center;
+  font-weight: bold;
+  font-family: Georgia, serif;
+  margin-bottom: 2px; }
 
 /*# sourceMappingURL=style.css.map */

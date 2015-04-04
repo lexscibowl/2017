@@ -57,7 +57,9 @@ body{
 #bgimage{
 	position: fixed; top:0; left:0; right:0; bottom:0;
 	z-index: -1000;
-	width: 100%;
+	height: 200%;
+	min-width: 100%;
+	//background position center
 	opacity: 0.5;
 }
 
@@ -140,9 +142,9 @@ body>header{
 	i.fa-fb-f:before{position: relative; top: 2px;}
 	i.fa-github:before{position: relative; top: 1px;}
 	
-	i.fa-envelope-o:hover{background-color: gray; color: white;}
+	i.fa-envelope-o:hover{background-color: #666; color: white;}
 	i.fa-fb-f:hover{background-color: #3B5998; color: white;}
-	i.fa-github:hover{background-color: black; color: white;}
+	i.fa-github:hover{background-color: #000; color: white;}
 }
 h1, h2, h3, .titlecaption1, .titlecaption2{
 	display:block;
@@ -167,7 +169,7 @@ h1{
 	margin-top: 0.2em;
 	font-size: 1.8em;
 	font-weight: 400;
-	@media (min-width: 600px){font-size: 2.7em;}
+	@media (min-width: 600px){font-size: 3em;}
 }
 
 section{
@@ -192,31 +194,44 @@ section{
 	}
 
 	.content{
+		//Much help from http://stackoverflow.com/questions/7051768/justify-divs-with-css-to-fill-width-of-parent-container
 		position: absolute; left: 200px; right: 200px;
-		text-align: center;
 		vertical-align: top;
 		font-size: 1.3em;
 		border: solid 1px #000;
-		@media (max-width: 900px){
-			left: 0px; right: 0px;
+		
+		text-align: justify;
+		-ms-text-justify: distribute-all-lines;
+		text-justify: distribute-all-lines;
+		
+		@media (max-width: 900px){ left: 0px; right: 0px; }
+		.stretch{
+			width: 100%;
+			display: inline-block;
+			font-size: 0;
+			line-height: 0;
 		}
 		.box{
-			display: block;
 			background-color: white;
-			margin: 10px;
 			padding: 10px;
-			border-radius: 5px;
-			border: solid 3px #000;
-
 			@media (min-width: 600px){
-				display: inline-block;
-				max-width: 300px;
-				width: 35%;
 			}
 			@media (min-width: 900px){
+				border: solid 3px #000;
+				border-radius: 5px;
+				margin: 10px;
+				
+				max-width: 200px;
+				vertical-align: top;
 				display: inline-block;
-				max-width: 300px;
-				width: 25%;
+				*display: inline;
+				zoom: 1;
+			}
+			@media (max-width: 900px){
+				border: solid 1px #000;
+				margin: 10px 11px 10px 9px;
+				display: block;
+				width: 100%;
 			}
 
 			h3{
@@ -225,6 +240,8 @@ section{
 			p{
 				text-align: left;
 				text-indent: 10px;
+				font-family: Georgia, serif;
+				font-size: 0.8em;
 			}
 		}
 	}
@@ -239,5 +256,8 @@ section{
 
 footer{
 	text-align:center;
+	font-weight: bold;
+	font-family: Georgia, serif;
+	margin-bottom: 2px;
 }
 
