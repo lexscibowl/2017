@@ -65,7 +65,7 @@ nav a {
   text-align: center;
   width: 130px;
   height: 30px;
-  padding: 10px;
+  padding: 20px 10px;
   vertical-align: top;
   font-size: 16pt;
   font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
@@ -171,7 +171,7 @@ h1 {
       font-size: 3em; } }
 
 section {
-  height: 100%;
+  min-height: 100%;
   text-align: center; }
   section header {
     width: 100%;
@@ -179,7 +179,7 @@ section {
     font-size: 5em;
     color: white;
     line-height: 1.8em;
-    font-family: "Dosis", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif; }
+    font-family: "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif; }
     @media (max-width: 900px) {
       section header {
         height: 100px;
@@ -193,24 +193,15 @@ section {
       margin: -1em 0 0 0;
       font-size: 0.5em; }
   section .content {
-    position: absolute;
-    left: 200px;
-    right: 200px;
     vertical-align: top;
     font-size: 1.3em;
     border: solid 1px #000;
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines; }
+    margin: 0 75px 0 225px;
+    padding: 0 0 100px 0; }
     @media (max-width: 900px) {
       section .content {
         left: 0px;
         right: 0px; } }
-    section .content .stretch {
-      width: 100%;
-      display: inline-block;
-      font-size: 0;
-      line-height: 0; }
     section .content .box {
       background-color: white;
       padding: 10px; }
@@ -218,8 +209,8 @@ section {
         section .content .box {
           border: solid 3px #000;
           border-radius: 5px;
-          margin: 10px;
-          max-width: 200px;
+          margin: 5px;
+          max-width: 300px;
           vertical-align: top;
           display: inline-block;
           *display: inline;
