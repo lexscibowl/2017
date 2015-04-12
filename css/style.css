@@ -71,7 +71,7 @@ nav a {
   font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
   text-decoration: none;
   font-weight: 400;
-  transition: color 1s, background-color 1s;
+  transition: all 0.5s;
   background-color: #000;
   color: #fff; }
   nav a:hover, nav a:active {
@@ -97,98 +97,91 @@ nav a {
 body > header {
   height: 100%;
   text-align: center; }
-
-#titlebox {
-  display: inline-block;
-  position: relative;
-  top: 25%;
-  color: #000; }
-
-#contactbuttons {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  font-size: 24pt; }
-  @media (max-width: 600px) {
-    #contactbuttons {
-      display: none; } }
-  #contactbuttons i.fa {
+  body > header #titlebox {
     display: inline-block;
-    width: 24pt;
-    height: 24pt;
-    padding: 0px;
-    border-radius: 4px;
-    margin: 5px;
-    transition: all 0.3s;
-    color: #666;
-    text-align: center; }
-  #contactbuttons i.fa-envelope-o {
-    padding: 0px 4px 4px 3px; }
-  #contactbuttons i.fa-envelope-o:before {
     position: relative;
-    top: 1px; }
-  #contactbuttons i.fa-fb-f:before {
-    position: relative;
-    top: 2px; }
-  #contactbuttons i.fa-github:before {
-    position: relative;
-    top: 1px; }
-  #contactbuttons i.fa-envelope-o:hover {
-    background-color: #666;
-    color: white; }
-  #contactbuttons i.fa-fb-f:hover {
-    background-color: #3B5998;
-    color: white; }
-  #contactbuttons i.fa-github:hover {
-    background-color: #000;
-    color: white; }
-
-h1, h2, h3, .titlecaption1, .titlecaption2 {
-  display: block;
-  font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-  text-align: center;
-  margin: 0; }
-
-h1 {
-  font-family: "Poiret One", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-  letter-spacing: 0.05em;
-  font-size: 3.1em; }
-  @media (min-width: 600px) {
-    h1 {
-      font-size: 7.2em; } }
-  h1 small {
-    font-size: 0.9em; }
-
-.titlecaption1 {
-  margin-top: -0.1em;
-  font-size: 1.2em;
-  font-weight: 700; }
-  @media (min-width: 600px) {
-    .titlecaption1 {
-      font-size: 1.6em; } }
-
-.titlecaption2 {
-  margin-top: 0.2em;
-  font-size: 1.8em;
-  font-weight: 400; }
-  @media (min-width: 600px) {
-    .titlecaption2 {
-      font-size: 3em; } }
-
-#btnreg {
-  display: inline-block;
-  font-size: 2em;
-  padding: 0.7em;
-  margin-top: 1em;
-  font-weight: 700;
-  font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-  background-color: #eee;
-  color: #000;
-  transition: all 1s;
-  text-decoration: none; }
-  #btnreg:hover, #btnreg:active {
-    background-color: #fc0;
-    color: #52f; }
+    top: 25%;
+    color: #000; }
+  body > header #contactbuttons {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 24pt; }
+    @media (max-width: 600px) {
+      body > header #contactbuttons {
+        display: none; } }
+    body > header #contactbuttons i.fa {
+      display: inline-block;
+      width: 24pt;
+      height: 24pt;
+      padding: 0px;
+      border-radius: 4px;
+      margin: 5px;
+      transition: all 0.3s;
+      color: #666;
+      text-align: center; }
+    body > header #contactbuttons i.fa-envelope-o {
+      padding: 0px 4px 4px 3px; }
+    body > header #contactbuttons i.fa-envelope-o:before {
+      position: relative;
+      top: 1px; }
+    body > header #contactbuttons i.fa-fb-f:before {
+      position: relative;
+      top: 2px; }
+    body > header #contactbuttons i.fa-github:before {
+      position: relative;
+      top: 1px; }
+    body > header #contactbuttons i.fa-envelope-o:hover {
+      background-color: #666;
+      color: white; }
+    body > header #contactbuttons i.fa-fb-f:hover {
+      background-color: #3B5998;
+      color: white; }
+    body > header #contactbuttons i.fa-github:hover {
+      background-color: #000;
+      color: white; }
+  body > header h1, body > header h2, body > header h3, body > header .titlecaption1, body > header .titlecaption2 {
+    display: block;
+    font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0; }
+  body > header h1 {
+    font-family: "Poiret One", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 3.1em; }
+    @media (min-width: 600px) {
+      body > header h1 {
+        font-size: 7.2em; } }
+    body > header h1 small {
+      font-size: 0.9em; }
+  body > header .titlecaption1 {
+    margin-top: -0.1em;
+    font-size: 1.2em;
+    font-weight: 700; }
+    @media (min-width: 600px) {
+      body > header .titlecaption1 {
+        font-size: 1.6em; } }
+  body > header .titlecaption2 {
+    margin-top: 0.2em;
+    font-size: 1.8em;
+    font-weight: 400; }
+    @media (min-width: 600px) {
+      body > header .titlecaption2 {
+        font-size: 3em; } }
+  body > header #btnreg {
+    display: inline-block;
+    font-size: 2.4em;
+    padding: 0.7em 1em;
+    margin-top: 0.7em;
+    font-weight: 700;
+    font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+    background-color: #eee;
+    color: #000;
+    transition: all 0.5s;
+    text-decoration: none; }
+    body > header #btnreg:hover, body > header #btnreg:active {
+      background-color: #fc0;
+      color: #52f; }
 
 section {
   font-family: "Georgia", "Times New Roman", serif; }
@@ -218,7 +211,7 @@ section {
   section .content {
     vertical-align: top;
     font-size: 1.3em;
-    margin: 0 100px 200px 100px;
+    margin: 0 100px 100px 100px;
     padding: 40px 40px;
     text-align: center;
     background-color: white; }
@@ -230,7 +223,7 @@ section {
       font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
       background-color: #eee;
       color: #000;
-      transition: all 1s;
+      transition: all 0.5s;
       text-decoration: none; }
       section .content #reglink:hover, section .content #reglink:active {
         background-color: #fc0;
