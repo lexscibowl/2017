@@ -67,11 +67,11 @@ nav a {
   height: 30px;
   padding: 20px 10px;
   vertical-align: top;
-  font-size: 16pt;
+  font-size: 1.5em;
   font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
   text-decoration: none;
   font-weight: 400;
-  transition: color 0.5s, background-color 0.5s;
+  transition: color 1s, background-color 1s;
   background-color: #000;
   color: #fff; }
   nav a:hover, nav a:active {
@@ -101,7 +101,7 @@ body > header {
 #titlebox {
   display: inline-block;
   position: relative;
-  top: 30%;
+  top: 25%;
   color: #000; }
 
 #contactbuttons {
@@ -175,8 +175,22 @@ h1 {
     .titlecaption2 {
       font-size: 3em; } }
 
+#btnreg {
+  display: inline-block;
+  font-size: 2em;
+  padding: 0.7em;
+  margin-top: 1em;
+  font-weight: 700;
+  font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+  background-color: #eee;
+  color: #000;
+  transition: all 1s;
+  text-decoration: none; }
+  #btnreg:hover, #btnreg:active {
+    background-color: #fc0;
+    color: #52f; }
+
 section {
-  min-height: 100%;
   font-family: "Georgia", "Times New Roman", serif; }
   section header {
     width: 100%;
@@ -198,40 +212,53 @@ section {
       line-height: 1.7em;
       margin: -1em 0 0 0;
       font-size: 0.5em; }
+  @media (min-width: 900px) {
+    section#faq .content {
+      padding: 80px 30px 80px 90px; } }
   section .content {
     vertical-align: top;
     font-size: 1.3em;
     margin: 0 100px 200px 100px;
-    padding: 100px;
+    padding: 40px 40px;
+    text-align: center;
     background-color: white; }
-    @media (max-width: 900px) {
-      section .content {
-        left: 0px;
-        right: 0px; } }
+    section .content #reglink {
+      display: inline-block;
+      font-size: 2em;
+      padding: 0.7em;
+      font-weight: 700;
+      font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+      background-color: #eee;
+      color: #000;
+      transition: all 1s;
+      text-decoration: none; }
+      section .content #reglink:hover, section .content #reglink:active {
+        background-color: #fc0;
+        color: #52f; }
     section .content .box {
+      text-align: left;
       background-color: white;
-      padding: 5px; }
-      @media (min-width: 900px) {
+      padding: 5px;
+      font-family: Georgia, serif;
+      font-size: 0.8em;
+      vertical-align: top;
+      margin: 5px;
+      width: 280px;
+      display: inline-block; }
+      @media (max-width: 950px) {
         section .content .box {
-          margin: 5px;
-          max-width: 300px;
-          vertical-align: top;
-          display: inline-block;
-          *display: inline;
-          zoom: 1; } }
-      @media (max-width: 900px) {
-        section .content .box {
-          border: solid 1px #000;
           margin: 10px 11px 10px 9px;
-          display: block;
-          width: 100%; } }
+          width: 100%;
+          display: block; } }
       section .content .box h3 {
-        font-size: 1em; }
+        font-size: 1.3em; }
       section .content .box p {
-        text-align: left;
         text-indent: 10px;
-        font-family: Georgia, serif;
-        font-size: 0.8em; }
+        line-height: 1.7em; }
+      section .content .box ul {
+        padding: 0 0 0 2em;
+        font-size: 0.9em;
+        line-height: 1.7em; }
 
 #contest header {
   background-color: #f66; }
@@ -250,8 +277,9 @@ section {
 
 footer {
   text-align: center;
-  font-weight: bold;
   font-family: Georgia, serif;
-  margin-bottom: 2px; }
+  margin: 30px; }
+  footer p {
+    margin: 0px; }
 
 /*# sourceMappingURL=style.css.map */
