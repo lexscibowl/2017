@@ -132,7 +132,7 @@ body > header {
       position: relative;
       top: 1px; }
     body > header #contactbuttons i.fa-envelope-o:hover {
-      background-color: #666;
+      background-color: #999;
       color: white; }
     body > header #contactbuttons i.fa-fb-f:hover {
       background-color: #3B5998;
@@ -212,7 +212,7 @@ section {
     vertical-align: top;
     font-size: 1.3em;
     margin: 0 100px 100px 100px;
-    padding: 40px 40px;
+    padding: 40px 40px 40px 100px;
     text-align: center;
     background-color: white; }
     section .content #reglink {
@@ -228,6 +228,10 @@ section {
       section .content #reglink:hover, section .content #reglink:active {
         background-color: #fc0;
         color: #52f; }
+    section .content table {
+      text-align: left; }
+      section .content table td {
+        padding: 0.5em 1em 0 0; }
     section .content .box {
       text-align: left;
       background-color: white;
