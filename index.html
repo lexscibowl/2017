@@ -190,7 +190,7 @@
 
 	<script>
 	$(document).ready(function(){
-		var $w=$(document);
+		var $d=$(document);
 		
 		//Smooth scrolling.
 		//Adapted from //http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
@@ -207,9 +207,12 @@
 			});
 		});
 		
-		$w.scroll(function(e){
+		$d.scroll(function(e){
 			//parallax
-			$("#bgimage").css('top',(-$w.scrollTop()/6)+'px');
+			var proportion = ($("#bgimage").height() - $(window).height()) // amount you need to scroll the image
+				/ $d.height(); // amount of scrolling you have to do
+			
+			$("#bgimage").css('top',(-$d.scrollTop() * proportion)+'px');
 			
 			//highlighting navbar items
 			//cmp with tops of each anchorlink.
