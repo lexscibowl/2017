@@ -30,6 +30,19 @@ $FText: "Georgia", "Times New Roman", serif;
 		url('Intro.ttf.svg') format('svg');
 }*/
 
+/**
+ * Quick fade on target to attract user attention
+ */
+
+@-webkit-keyframes target-fade {
+    0% { background-color: rgba(0,0,0,.5); }
+    100% { background-color: rgba(0,0,0,0); }
+}
+@-moz-keyframes target-fade {
+    0% { background-color: rgba(0,0,0,.5); }
+    100% { background-color: rgba(0,0,0,0); }
+}
+
 
 .fa-fb-f:before { //work around AdBlock
 	content: "\f09a";
@@ -121,7 +134,11 @@ body>header{
 	#titlebox{
 		display: inline-block;
 		
-		position: relative; top:25%;
+		position: relative;
+		top: 25%;
+		@media (max-height: 800px){top: 20%}
+		@media (max-height: 500px){top: 15%}
+		@media (max-height: 300px){top: 10%}
 		color: $captioncolor;
 	}
 	#contactbuttons{
@@ -161,24 +178,25 @@ body>header{
 		font-family: $FMainTitle;
 		letter-spacing: 0.05em;
 		font-size: 3.1em;
-		@media (min-width: 600px){font-size: 7.2em;}
+		@media (min-width: 600px) and (min-height: 500px){font-size: 7.2em;}
 		small{font-size: 0.9em;}
 	}
 	.titlecaption1{
 		margin-top: -0.1em;
 		font-size: 1.2em;
 		font-weight: 700;
-		@media (min-width: 600px){font-size: 1.6em;}
+		@media (min-width: 600px) and (min-height: 500px){font-size: 1.6em;}
 	}
 	.titlecaption2{
 		margin-top: 0.2em;
 		font-size: 1.8em;
 		font-weight: 400;
-		@media (min-width: 600px){font-size: 3em;}
+		@media (min-width: 600px) and (min-height: 500px){font-size: 3em;}
 	}
 	#btnreg{
 		display: inline-block;
-		font-size: 2.4em;
+		font-size: 1.5em;
+		@media (min-width: 600px) and (min-height: 500px){font-size: 2.4em;}
 		padding: 0.7em 1em;
 		margin-top: 0.7em;
 		font-weight: 700;
@@ -215,13 +233,17 @@ section{
 	&#faq .content{
 		@media (min-width: 900px){padding: 80px 30px 80px 90px;}
 	}
+	&#register .content{
+		@media (min-width: 900px){padding: 40px 100px 40px 100px;}
+	}
 	
 	.content{
 		//Much help from http://stackoverflow.com/questions/7051768/justify-divs-with-css-to-fill-width-of-parent-container
 		vertical-align: top;
 		font-size: 1.3em;
 		margin: 0 100px 100px 100px;
-		padding: 40px 40px 40px 100px;
+		padding: 40px 40px 40px 40px;
+		@media (min-width: 900px){padding: 40px 40px 40px 100px;}
 		
 		text-align:center;
 		
@@ -240,7 +262,12 @@ section{
 		}
 		
 		table{
+			margin-left: auto;
+			margin-right: auto;
 			text-align: left;
+			tr:nth-child(even) {
+				background-color: #e3e3e3;
+			}
 			td{
 				padding: 0.5em 1em 0 0;
 			}
@@ -249,17 +276,21 @@ section{
 		.box{
 			text-align: left;
 			background-color: white;
-			padding: 5px;
+			padding: 10px; margin: 0px;
 			font-family: Georgia, serif;
 			font-size: 0.8em;
 			vertical-align: top;
 			
-			//Question blocks
-			margin: 5px;
+			//Blocky questions format
 			width: 280px;
 			display: inline-block;
 			
-			//Full-width questions
+			&:target {
+				-webkit-animation: target-fade 2s 1;
+				-moz-animation: target-fade 2s 1;
+			}
+			
+			//Full-width questions format
 			@media (max-width: 950px){
 				margin: 10px 11px 10px 9px;
 				width: 100%;
