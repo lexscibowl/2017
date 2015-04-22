@@ -269,6 +269,12 @@ section {
         background-color: #e3e3e3; }
       section .content table td {
         padding: 0.5em 1em 0 0; }
+      @media (max-width: 600px) {
+        section .content table {
+          font-size: 0.8em; } }
+      @media (max-width: 600px) {
+        section .content table {
+          font-size: 0.5em; } }
     section .content .box {
       text-align: left;
       background-color: white;

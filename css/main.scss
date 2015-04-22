@@ -278,6 +278,8 @@ section{
 			td{
 				padding: 0.5em 1em 0 0;
 			}
+			@media (max-width: 600px){font-size: 0.8em;}
+			@media (max-width: 600px){font-size: 0.5em;}
 		}
 		
 		.box{
