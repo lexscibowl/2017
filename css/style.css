@@ -239,6 +239,7 @@ section {
     font-size: 1.3em;
     margin: 0 100px 100px 100px;
     padding: 40px 40px 40px 40px;
+    opacity: 0.85;
     text-align: center;
     background-color: white; }
     @media (min-width: 900px) {
