@@ -246,6 +246,7 @@ section{
 		vertical-align: top;
 		font-size: 1.3em;
 		margin: 0 100px 100px 100px;
+		@media (max-width: 600px){margin: 0;}
 		padding: 40px 40px 40px 40px;
 		@media (min-width: 900px){padding: 40px 40px 40px 100px;}
 		
@@ -302,6 +303,7 @@ section{
 				width: 100%;
 				display: block;
 			}
+			@media (max-width: 600px){margin: 0;}
 
 			h3{
 				font-size: 1.3em;

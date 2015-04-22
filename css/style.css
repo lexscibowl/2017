@@ -242,6 +242,9 @@ section {
     opacity: 0.85;
     text-align: center;
     background-color: white; }
+    @media (max-width: 600px) {
+      section .content {
+        margin: 0; } }
     @media (min-width: 900px) {
       section .content {
         padding: 40px 40px 40px 100px; } }
@@ -284,6 +287,9 @@ section {
           margin: 10px 11px 10px 9px;
           width: 100%;
           display: block; } }
+      @media (max-width: 600px) {
+        section .content .box {
+          margin: 0; } }
       section .content .box h3 {
         font-size: 1.3em; }
       section .content .box p {
