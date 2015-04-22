@@ -132,7 +132,7 @@ body > header {
     position: absolute;
     top: 50px;
     right: 50px;
-    font-size: 24pt; }
+    font-size: 30pt; }
     @media (max-width: 600px) {
       body > header #contactbuttons {
         display: none; } }
@@ -154,17 +154,11 @@ body > header {
     body > header #contactbuttons i.fa-fb-f:before {
       position: relative;
       top: 2px; }
-    body > header #contactbuttons i.fa-github:before {
-      position: relative;
-      top: 1px; }
     body > header #contactbuttons i.fa-envelope-o:hover {
       background-color: #999;
       color: white; }
     body > header #contactbuttons i.fa-fb-f:hover {
       background-color: #3B5998;
-      color: white; }
-    body > header #contactbuttons i.fa-github:hover {
-      background-color: #000;
       color: white; }
   body > header h1, body > header h2, body > header h3, body > header .titlecaption1, body > header .titlecaption2 {
     display: block;
