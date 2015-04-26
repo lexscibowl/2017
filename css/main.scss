@@ -277,13 +277,18 @@ section{
 		#reglink{
 			display: inline-block;
 			font-size: 2em;
-			padding: 0.7em;
+			padding: 0.4em 1em;
 			font-weight: 700;
 			font-family: $FNav;
 			background-color: #eee; color: #000;
 			transition: all 0.5s;
 			text-decoration: none;
 			&:hover, &:active{background-color: $yellow; color: $blue;}
+			p{
+				font-size: 0.5em;
+				margin-top: -0.2em;
+				margin-bottom: 0.2em;
+			}
 		}
 		
 		table{
