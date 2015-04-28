@@ -195,7 +195,7 @@ body > header {
     @media (min-width: 600px) and (min-height: 500px) {
       body > header .titlecaption2 {
         font-size: 2.6em; } }
-  body > header #btnreg, body > header #btnvol {
+  body > header .bigbtn {
     display: inline-block;
     vertical-align: top;
     text-align: center;
@@ -206,24 +206,24 @@ body > header {
     font-size: 1.5em;
     font-weight: 700;
     font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-    background-color: #eee;
-    color: #000;
     transition: all 0.5s;
     text-decoration: none; }
     @media (min-width: 600px) and (min-height: 500px) {
-      body > header #btnreg, body > header #btnvol {
+      body > header .bigbtn {
         font-size: 2.4em; } }
-    body > header #btnreg:hover, body > header #btnreg:active, body > header #btnvol:hover, body > header #btnvol:active {
-      background-color: #fc0;
-      color: #52f; }
-    body > header #btnreg p, body > header #btnvol p {
+    body > header .bigbtn.vol {
+      background-color: #222;
+      color: #fff; }
+    body > header .bigbtn.reg {
+      background-color: #eee;
+      color: #000; }
+    body > header .bigbtn:hover, body > header .bigbtn:active {
+      background-color: #fc0 !important;
+      color: #52f !important; }
+    body > header .bigbtn p {
       font-size: 0.4em;
       margin-top: 0.2em;
       margin-bottom: -0.6em; }
-  body > header #btnvol {
-    background-color: #222;
-    color: #fff;
-    padding: 0.8em 1em 0.1em 1em; }
   body > header .titlecaption3 {
     margin-top: 0.4em;
     font-size: 0.8em;

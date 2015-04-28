@@ -200,7 +200,7 @@ body>header{
 		font-weight: 400;
 		@media (min-width: 600px) and (min-height: 500px){font-size: 2.6em;}
 	}
-	#btnreg, #btnvol{
+	.bigbtn{
 		display: inline-block;
 		vertical-align: top;
 		text-align:center;
@@ -215,20 +215,17 @@ body>header{
 		font-weight: 700;
 		font-family: $FNav;
 		
-		background-color: #eee; color: #000;
 		transition: all 0.5s;
 		text-decoration: none;
-		&:hover, &:active{background-color: $yellow; color: $blue;}
+		&.vol{background-color: #222; color: #fff;}
+		&.reg{background-color: #eee; color: #000;}
+		&:hover, &:active{background-color: $yellow !important; color: $blue !important;}
 		
 		p{
 			font-size: 0.4em;
 			margin-top: 0.2em;
 			margin-bottom: -0.6em;
 		}
-	}
-	#btnvol{
-		background-color: #222; color: #fff;
-		padding: 0.8em 1em 0.1em 1em;
 	}
 	.titlecaption3{
 		margin-top: 0.4em;
