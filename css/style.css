@@ -1,16 +1,9 @@
-/*Main LexSciBowl Sass-CSS Stylesheet*/
-/*@font-face { //fontsquirrel recommendation
-	font-family: 'Intro';
-	font-style: normal;
-	font-weight: normal;
-	src: url('Intro.eot');
-	src: url('Intro.eot?#iefix') format('embedded-opentype'),
-		url('Intro.ttf.woff') format('woff'),
-		url('Intro.ttf.svg') format('svg');
-}*/
-/**
- * Quick fade on target to attract user attention
- */
+/*
+Main LexSciBowl 2015 Sass-CSS Stylesheet
+https://github.com/mathnerd3141/LexSciBowl
+http://lexscibowl.org
+*/
+/*Merriweather|Dosis|Poiret+One*/
 @-webkit-keyframes target-fade {
   0% {
     background-color: rgba(0, 0, 0, 0.5); }
@@ -31,7 +24,7 @@
   color: #fc0; }
 
 .lsb.b {
-  color: #000; }
+  color: black; }
 
 a {
   color: #444;
@@ -49,7 +42,8 @@ body {
   bottom: 0px;
   background-color: white;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif; }
 
 #bgimage {
   position: fixed;
@@ -64,52 +58,53 @@ body {
 
 nav {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1000;
-  transition: opacity 0.5s;
-  opacity: 0.6; }
-  nav:hover {
-    opacity: 1.0; }
+  z-index: 1000; }
   @media (min-width: 900px) {
     nav {
       top: 35px;
       left: 35px;
-      width: 130px; } }
-
-nav a {
-  display: block;
-  text-align: center;
-  width: 130px;
-  height: 30px;
-  padding: 20px 10px;
-  vertical-align: top;
-  font-size: 1.5em;
-  font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-  text-decoration: none;
-  font-weight: 400;
-  transition: all 0.5s;
-  background-color: #000;
-  color: #fff; }
-  nav a:hover, nav a:active {
-    background-color: #fff;
-    color: #000; }
-  nav a#navreg {
-    font-weight: 700;
-    background-color: #eee;
-    color: #000; }
-    nav a#navreg:hover, nav a#navreg:active {
-      background-color: #fc0;
-      color: #52f; }
+      opacity: 0.6; }
+      nav:hover {
+        opacity: 1.0; } }
   @media (max-width: 900px) {
-    nav a {
-      display: inline-block;
-      width: auto; } }
-  @media (max-width: 900px) {
-    nav a {
-      font-size: 11pt;
-      padding: 5px 5px;
-      height: 20px; } }
+    nav {
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      text-align: center; } }
+  nav a {
+    text-align: center;
+    vertical-align: top;
+    font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.5s;
+    background-color: #000;
+    color: #fff; }
+    @media (min-width: 900px) {
+      nav a {
+        display: block;
+        width: 130px;
+        height: 30px;
+        padding: 20px 10px;
+        font-size: 1.5em; } }
+    @media (max-width: 900px) {
+      nav a {
+        display: inline-block;
+        width: auto;
+        height: 20px;
+        padding: 5px 5px;
+        font-size: 0.9em; } }
+    nav a:hover, nav a:active {
+      background-color: #fff;
+      color: #000; }
+    nav a#navreg {
+      font-weight: 700;
+      background-color: #eee;
+      color: #000; }
+      nav a#navreg:hover, nav a#navreg:active {
+        background-color: #fc0;
+        color: #52f; }
 
 body > header {
   height: 100%;
@@ -117,12 +112,14 @@ body > header {
   body > header #titlebox {
     display: inline-block;
     position: relative;
-    top: 25%;
     color: #000; }
-    @media (max-height: 800px) {
+    @media (min-height: 800px) {
+      body > header #titlebox {
+        top: 25%; } }
+    @media (min-height: 500px) and (max-height: 800px) {
       body > header #titlebox {
         top: 20%; } }
-    @media (max-height: 500px) {
+    @media (min-height: 300px) and (max-height: 500px) {
       body > header #titlebox {
         top: 15%; } }
     @media (max-height: 300px) {
@@ -131,39 +128,43 @@ body > header {
   body > header #contactbuttons {
     position: absolute;
     top: 0.5em;
-    right: 0.5em;
-    font-size: 30pt; }
+    right: 0.5em; }
+    @media (min-width: 900px) {
+      body > header #contactbuttons {
+        font-size: 30pt; } }
+    @media (min-width: 600px) and (max-width: 900px) {
+      body > header #contactbuttons {
+        font-size: 15pt; } }
     @media (max-width: 600px) {
       body > header #contactbuttons {
         display: none; } }
-    @media (max-width: 900px) {
-      body > header #contactbuttons {
-        font-size: 15pt; } }
     body > header #contactbuttons i.fa {
       display: inline-block;
-      width: 30pt;
-      height: 30pt;
+      margin: 0.1em;
       padding: 0px;
       border-radius: 4px;
-      margin: 0.1em;
-      transition: all 0.3s;
+      text-align: center;
       color: #666;
-      text-align: center; }
+      transition: all 0.3s; }
+      @media (min-width: 900px) {
+        body > header #contactbuttons i.fa {
+          width: 30pt;
+          height: 30pt; } }
       @media (max-width: 900px) {
         body > header #contactbuttons i.fa {
           width: 15pt;
           height: 15pt; } }
     body > header #contactbuttons i.fa-envelope-o {
-      padding: 0px 4px 4px 3px; }
-    body > header #contactbuttons i.fa-envelope-o:before {
-      position: relative;
-      top: 1px; }
+      padding: 0px 3px; }
+      body > header #contactbuttons i.fa-envelope-o:before {
+        position: relative;
+        top: -1px; }
+      body > header #contactbuttons i.fa-envelope-o:hover {
+        background-color: #999;
+        color: white; }
     body > header #contactbuttons i.fa-fb-f:before {
       position: relative;
       top: 2px; }
-    body > header #contactbuttons i.fa-envelope-o:hover {
-      background-color: #999;
-      color: white; }
     body > header #contactbuttons i.fa-fb-f:hover {
       background-color: #3B5998;
       color: white; }
@@ -174,36 +175,41 @@ body > header {
     margin: 0; }
   body > header h1 {
     font-family: "Poiret One", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-    letter-spacing: 0.05em;
-    font-size: 3.1em; }
+    letter-spacing: 0.05em; }
     @media (min-width: 600px) and (min-height: 500px) {
       body > header h1 {
         font-size: 7.2em; } }
-    body > header h1 small {
+    @media (max-width: 600px), (max-height: 500px) {
+      body > header h1 {
+        font-size: 3.1em; } }
+    body > header h1 .tall-letter {
       font-size: 0.9em; }
   body > header .titlecaption1 {
     margin-top: -0.1em;
-    font-size: 1.2em;
     font-weight: 700; }
     @media (min-width: 600px) and (min-height: 500px) {
       body > header .titlecaption1 {
         font-size: 1.6em; } }
+    @media (max-width: 600px), (max-height: 500px) {
+      body > header .titlecaption1 {
+        font-size: 1.2em; } }
   body > header .titlecaption2 {
     margin-top: 0.2em;
-    font-size: 1.8em;
     font-weight: 400; }
     @media (min-width: 600px) and (min-height: 500px) {
       body > header .titlecaption2 {
         font-size: 2.6em; } }
+    @media (max-width: 600px), (max-height: 500px) {
+      body > header .titlecaption2 {
+        font-size: 1.8em; } }
   body > header .bigbtn {
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    width: 5em;
-    height: 2em;
     padding: 0.5em 1em 0.4em 1em;
     margin: 0.7em;
-    font-size: 1.5em;
+    width: 5em;
+    height: 2em;
     font-weight: 700;
     font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
     transition: all 0.5s;
@@ -211,6 +217,9 @@ body > header {
     @media (min-width: 600px) and (min-height: 500px) {
       body > header .bigbtn {
         font-size: 2.4em; } }
+    @media (max-width: 600px), (max-height: 500px) {
+      body > header .bigbtn {
+        font-size: 1.5em; } }
     body > header .bigbtn.vol {
       background-color: #222;
       color: #fff; }
@@ -220,143 +229,136 @@ body > header {
     body > header .bigbtn:hover, body > header .bigbtn:active {
       background-color: #fc0 !important;
       color: #52f !important; }
-    body > header .bigbtn p {
-      font-size: 0.4em;
+    body > header .bigbtn small {
+      display: block;
       margin-top: 0.2em;
-      margin-bottom: -0.6em; }
-  body > header .titlecaption3 {
-    margin-top: 0.4em;
-    font-size: 0.8em;
-    font-style: italic;
-    font-weight: 400; }
-    @media (min-width: 600px) and (min-height: 500px) {
-      body > header .titlecaption3 {
-        font-size: 1.2em; } }
-
-section {
-  font-family: "Georgia", "Times New Roman", serif; }
-  section header {
-    width: 100%;
-    height: 200px;
-    font-size: 5em;
-    text-align: center;
-    color: white;
-    line-height: 1.8em;
-    font-family: "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif; }
-    @media (max-width: 900px) {
-      section header {
-        height: 100px;
-        font-size: 2.5em; } }
-    @media (max-width: 400px) {
-      section header {
-        height: 80px;
-        font-size: 2.0em; } }
-    section header p {
-      font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-      line-height: 1.7em;
-      margin: -0.8em 0 0 0;
+      margin-bottom: -0.6em;
       font-size: 0.4em; }
-  @media (min-width: 900px) {
-    section#faq .content {
-      padding: 80px 30px 80px 90px; } }
-  @media (min-width: 900px) {
-    section#register .content {
-      padding: 40px 100px 40px 100px; } }
-  section .content {
-    vertical-align: top;
-    font-size: 1.3em;
-    margin: 0 100px 150px 100px;
-    padding: 40px 40px 40px 40px;
-    opacity: 0.85;
-    text-align: center;
-    background-color: white; }
-    @media (max-width: 600px) {
-      section .content {
-        margin: 0 0 20px 0; } }
-    @media (min-width: 900px) {
-      section .content {
-        padding: 40px 40px 40px 100px; } }
-    section .content #reglink {
-      display: inline-block;
-      font-size: 2em;
-      padding: 0.4em 1em;
-      font-weight: 700;
-      font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-      background-color: #eee;
-      color: #000;
-      transition: all 0.5s;
-      text-decoration: none; }
-      section .content #reglink:hover, section .content #reglink:active {
-        background-color: #fc0;
-        color: #52f; }
-      section .content #reglink p {
-        font-size: 0.5em;
-        margin-top: -0.2em;
-        margin-bottom: 0.2em; }
-    section .content table {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left; }
-      section .content table tr:nth-child(even) {
-        background-color: #e3e3e3; }
-      section .content table td {
-        padding: 0.5em 1em 0 0; }
-      @media (max-width: 700px) {
-        section .content table {
-          font-size: 0.5em; } }
-    section .content .box {
-      text-align: left;
-      background-color: white;
-      padding: 10px;
-      margin: 0px;
-      font-family: Georgia, serif;
-      font-size: 0.8em;
-      vertical-align: top;
-      width: 280px;
-      display: inline-block; }
-      section .content .box:target {
-        -webkit-animation: target-fade 2s 1;
-        -moz-animation: target-fade 2s 1; }
-      @media (max-width: 950px) {
-        section .content .box {
-          margin: 10px 11px 10px 9px;
-          width: 100%;
-          display: block; } }
-      @media (max-width: 600px) {
-        section .content .box {
-          margin: 0; } }
-      section .content .box h3 {
-        font-size: 1.3em; }
-      section .content .box p {
-        text-indent: 10px;
-        line-height: 1.7em; }
-      section .content .box ul {
-        padding: 0 0 0 2em;
-        font-size: 0.9em;
-        line-height: 1.7em; }
 
-#contest header {
-  background-color: #f66; }
+section header {
+  width: 100%;
+  text-align: center;
+  color: white; }
+  @media (min-width: 900px) {
+    section header {
+      height: 200px;
+      font-size: 5em; } }
+  @media (min-width: 400px) and (max-width: 900px) {
+    section header {
+      height: 100px;
+      font-size: 2.5em; } }
+  @media (max-width: 400px) {
+    section header {
+      height: 80px;
+      font-size: 2.0em; } }
+  section header h2 {
+    font-family: "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+    line-height: 1.8em;
+    margin: 0;
+    font-size: 1em; }
+  section header p {
+    font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+    line-height: 1.7em;
+    margin: -0.8em 0 0 0;
+    font-size: 0.4em; }
+section .content {
+  padding: 40px 40px 40px 40px;
+  vertical-align: top;
+  text-align: center;
+  font-size: 1.3em;
+  background-color: white;
+  opacity: 0.9; }
+  @media (max-width: 600px) {
+    section .content {
+      margin: 0 0 20px 0; } }
+  @media (min-width: 600px) {
+    section .content {
+      margin: 0 100px 150px 100px; } }
+  section .content #reglink {
+    display: inline-block;
+    font-size: 2em;
+    padding: 0.4em 1em;
+    font-weight: 700;
+    font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+    background-color: #eee;
+    color: #000;
+    transition: all 0.5s;
+    text-decoration: none; }
+    section .content #reglink:hover, section .content #reglink:active {
+      background-color: #fc0;
+      color: #52f; }
+    section .content #reglink p {
+      font-size: 0.5em;
+      margin-top: -0.2em;
+      margin-bottom: 0.2em; }
+  section .content table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; }
+    section .content table tr:nth-child(even) {
+      background-color: #e3e3e3; }
+    section .content table td {
+      padding: 0.5em 1em 0 0; }
+    @media (max-width: 700px) {
+      section .content table {
+        font-size: 0.5em; } }
+    @media (min-width: 700px) {
+      section .content table {
+        font-size: 1em; } }
+  section .content .box {
+    text-align: left;
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 0.8em;
+    vertical-align: top; }
+    @media (min-width: 950px) {
+      section .content .box {
+        display: inline-block;
+        width: 280px; } }
+    @media (max-width: 950px) {
+      section .content .box {
+        display: block;
+        width: 100%; } }
+    section .content .box:target {
+      -webkit-animation: target-fade 2s 1;
+      -moz-animation: target-fade 2s 1; }
+    section .content .box h3 {
+      font-size: 1.3em; }
+    section .content .box p {
+      text-indent: 10px;
+      line-height: 1.7em; }
+    section .content .box ul {
+      padding: 0 0 0 2em;
+      font-size: 0.9em;
+      line-height: 1.7em; }
 
 #faq header {
-  background-color: #f93; }
-
-#schedule header {
   background-color: #fc0; }
 
-#sponsors header {
-  background-color: #393; }
+#schedule header {
+  background-color: #52f; }
 
 #register header {
-  background-color: #009; }
+  background-color: black; }
 
+@media (min-width: 900px) {
+  #faq .content {
+    padding: 80px 30px 80px 90px; }
+
+  #schedule .content {
+    padding: 40px 40px 40px 100px; }
+
+  #register .content {
+    padding: 40px 100px 40px 100px; } }
 #register .content {
   margin-bottom: 0px; }
 
 footer {
   text-align: center;
   font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-  margin: 30px; }
+  margin: 40px; }
   footer p {
     margin: 0px; }
 

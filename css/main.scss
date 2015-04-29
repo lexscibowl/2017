@@ -1,40 +1,26 @@
-/*Main LexSciBowl Sass-CSS Stylesheet*/
+/*
+Main LexSciBowl 2015 Sass-CSS Stylesheet
+https://github.com/mathnerd3141/LexSciBowl
+http://lexscibowl.org
+*/
 
-$blue: #52f;   //#97f; //these commented values
-$yellow: #fc0; //#fd3; //are for a dark background
-$white: #000;  //#eee;
+$blue: #52f; //What if I do an IMAGE as the color? Sorta like Kimono logo
+$yellow: #fc0;
 $captioncolor: #000;
-//What if I do an IMAGE as the color? Sorta like Kimono logo (actually no nvm reversed but yeah)
 
-
-$contest: #f66;
-$faq: #f93;
-$schedule: #fc0;
-$sponsors: #393;
-$register: #009;
-
-//Merriweather|Dosis|Poiret+One
+/*Merriweather|Dosis|Poiret+One*/
 $FFallback: "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
 $FMainTitle: "Poiret One", $FFallback; //add a special flourish to the i in LexSciBowl?
 $FSubtitle: "Quicksand", $FFallback;
 $FNav: "Quicksand", $FFallback;
 $FSectionTitle: /*"Dosis",*/ $FFallback;
 $FSectionSubtitle: /*"Dosis",*/ "Quicksand", $FFallback;
-$FText: "Georgia", "Times New Roman", serif;
-/*@font-face { //fontsquirrel recommendation
-	font-family: 'Intro';
-	font-style: normal;
-	font-weight: normal;
-	src: url('Intro.eot');
-	src: url('Intro.eot?#iefix') format('embedded-opentype'),
-		url('Intro.ttf.woff') format('woff'),
-		url('Intro.ttf.svg') format('svg');
-}*/
+$FBody: "Georgia", "Times New Roman", serif;
 
-/**
- * Quick fade on target to attract user attention
- */
 
+
+//http://snook.ca/archives/html_and_css/yellow-fade-technique-css-animations
+//Quick fade on target to attract user attention
 @-webkit-keyframes target-fade {
     0% { background-color: rgba(0,0,0,.5); }
     100% { background-color: rgba(0,0,0,0); }
@@ -45,16 +31,15 @@ $FText: "Georgia", "Times New Roman", serif;
 }
 
 
-.fa-fb-f:before { //work around AdBlock
-	content: "\f09a";
-}
+.fa-fb-f:before {content: "\f09a";} //work around AdBlock
+
 ::selection{
 	//background-color: rgba(0,0,0,10);
 }
 
 .lsb.l{color: $blue;}
 .lsb.s{color: $yellow;}
-.lsb.b{color: $white;}
+.lsb.b{color: black;}
 
 a{
 	color: #444;
@@ -71,6 +56,7 @@ body{
 	position: absolute; top:0px; left:0px; right:0px; bottom:0px;
 	background-color: white;
 	padding: 0; margin: 0;
+	font-family: $FBody;
 }
 
 #bgimage{ //(This positioning will be parallaxed by JQuery)
@@ -83,52 +69,51 @@ body{
 
 nav{ //Flex is awesome though :)
 	position: fixed;
-	top:0px; left:0px;
 	z-index: 1000;
 	
-	//Not on mobile though
-	transition: opacity 0.5s;
-	opacity: 0.6;
-	&:hover{opacity: 1.0;}
-
 	@media (min-width: 900px){
 		top: 35px; left: 35px;
-		width: 130px;
+		
+		opacity: 0.6;
+		&:hover{opacity: 1.0;}
 	}
-}
-nav a{
-	display: block;
-	text-align: center;
-	width:130px;
-	height:30px;
-	padding:20px 10px;
-
-	vertical-align: top;
-
-	font-size: 1.5em;
-	font-family: $FNav;
-	text-decoration: none;
-
-	font-weight: 400;
-
-	transition: all 0.5s;
-	background-color: #000; color: #fff;
-	&:hover, &:active{background-color: #fff; color: #000;}
+	@media (max-width: 900px){
+		top:0px; left:0px;
+		
+		width: 100%;
+		text-align: center;
+	}
 	
-	&#navreg{
-		font-weight: 700;
-		background-color: #eee; color: #000;
-		&:hover, &:active{background-color: $yellow; color: $blue;}
-	}
-
-	@media (max-width: 900px){
-		display: inline-block;
-		width: auto;
-	}
-	@media (max-width: 900px){
-		font-size: 11pt;
-		padding: 5px 5px;
-		height: 20px;
+	a{
+		@media (min-width: 900px){
+			display: block;
+			width:130px; height:30px;
+			padding:20px 10px;
+			font-size: 1.5em;
+		}
+		@media (max-width: 900px){
+			display: inline-block;
+			width: auto; height: 20px;
+			padding: 5px 5px;
+			font-size: 0.9em; //11pt
+		}
+		
+		text-align: center;
+		vertical-align: top; //to set the boxes next to each other; weirdness otherwise. Doesn't mean that it's actually aligning internal text to the top.
+		
+		font-family: $FNav;
+		text-decoration: none;
+		font-weight: 400;
+		
+		transition: all 0.5s;
+		background-color: #000; color: #fff;
+		&:hover, &:active{background-color: #fff; color: #000;}
+		
+		&#navreg{
+			font-weight: 700;
+			background-color: #eee; color: #000;
+			&:hover, &:active{background-color: $yellow; color: $blue;}
+		}
 	}
 }
 
@@ -139,40 +124,41 @@ body>header{
 		display: inline-block;
 		
 		position: relative;
-		top: 25%;
-		@media (max-height: 800px){top: 20%}
-		@media (max-height: 500px){top: 15%}
+		@media (min-height: 800px){top: 25%;}
+		@media (min-height: 500px) and (max-height: 800px){top: 20%}
+		@media (min-height: 300px) and (max-height: 500px){top: 15%}
 		@media (max-height: 300px){top: 10%}
 		color: $captioncolor;
 	}
 	#contactbuttons{
-		position: absolute;
-		top: 0.5em;
-		right: 0.5em;
-		font-size: 30pt;
+		position: absolute; top: 0.5em; right: 0.5em;
+		@media (min-width: 900px){font-size: 30pt;}
+		@media (min-width: 600px) and (max-width: 900px){font-size: 15pt;}
 		@media (max-width: 600px){display: none;}
-		@media (max-width: 900px){font-size: 15pt;}
 		i.fa{
 			display: inline-block;
-			width: 30pt; height: 30pt; padding: 0px;
-			border-radius: 4px;
-			margin: 0.1em;
-			transition: all 0.3s;
-			color: #666;
-			text-align:center;
+			
+			@media (min-width: 900px){width: 30pt; height: 30pt;}
 			@media (max-width: 900px){width: 15pt; height: 15pt;}
+			
+			margin: 0.1em;
+			padding: 0px;
+			border-radius: 4px;
+			
+			text-align:center;
+			color: #666;
+			
+			transition: all 0.3s;
 		}
 		i.fa-envelope-o{
-			padding:0px 4px 4px 3px;
+			padding:0px 3px;
+			&:before{position: relative; top: -1px;}
+			&:hover{background-color: #999; color: white;}
 		}
-		
-		i.fa-envelope-o:before{position: relative; top: 1px;}
-		i.fa-fb-f:before{position: relative; top: 2px;}
-		//i.fa-github:before{position: relative; top: 1px;}
-		
-		i.fa-envelope-o:hover{background-color: #999; color: white;}
-		i.fa-fb-f:hover{background-color: #3B5998; color: white;}
-		//i.fa-github:hover{background-color: #000; color: white;}
+		i.fa-fb-f{
+			&:before{position: relative; top: 2px;}
+			&:hover{background-color: #3B5998; color: white;}
+		}
 	}
 	h1, h2, h3, .titlecaption1, .titlecaption2, .titlecaption3{
 		display:block;
@@ -183,34 +169,34 @@ body>header{
 	h1{
 		font-family: $FMainTitle;
 		letter-spacing: 0.05em;
-		font-size: 3.1em;
 		@media (min-width: 600px) and (min-height: 500px){font-size: 7.2em;}
-		small{font-size: 0.9em;}
+		@media (max-width: 600px), (max-height: 500px){font-size: 3.1em;}
+		.tall-letter{font-size: 0.9em;}
 	}
 	.titlecaption1{
 		margin-top: -0.1em;
-		font-size: 1.2em;
 		font-weight: 700;
 		@media (min-width: 600px) and (min-height: 500px){font-size: 1.6em;}
+		@media (max-width: 600px), (max-height: 500px){font-size: 1.2em;}
 	}
 	.titlecaption2{
 		margin-top: 0.2em;
-		font-size: 1.8em;
 		font-weight: 400;
 		@media (min-width: 600px) and (min-height: 500px){font-size: 2.6em;}
+		@media (max-width: 600px), (max-height: 500px){font-size: 1.8em;}
 	}
 	.bigbtn{
 		display: inline-block;
 		vertical-align: top;
 		text-align:center;
 		
-		width: 5em; height: 2em;
-		
 		padding: 0.5em 1em 0.4em 1em;
 		margin: 0.7em;
 		
-		font-size: 1.5em;
+		width: 5em; height: 2em;
+		
 		@media (min-width: 600px) and (min-height: 500px){font-size: 2.4em;}
+		@media (max-width: 600px), (max-height: 500px){font-size: 1.5em;}
 		font-weight: 700;
 		font-family: $FNav;
 		
@@ -220,36 +206,32 @@ body>header{
 		&.reg{background-color: #eee; color: #000;}
 		&:hover, &:active{background-color: $yellow !important; color: $blue !important;}
 		
-		p{
-			font-size: 0.4em;
+		small{
+			display: block;
 			margin-top: 0.2em;
 			margin-bottom: -0.6em;
+			
+			font-size: 0.4em;
 		}
-	}
-	.titlecaption3{
-		margin-top: 0.4em;
-		font-size: 0.8em;
-		font-style: italic;
-		font-weight: 400;
-		@media (min-width: 600px) and (min-height: 500px){font-size: 1.2em;}
 	}
 }
 
 section{
-	font-family: $FText;
-
 	header{ //rem instead of em, since rem is relative to HTML tag. 12pt = 16px = 1em = 100%.
 		width: 100%;
-		@media (max-width: 900px){height: 100px; font-size: 2.5em;}
-		@media (max-width: 400px){height: 80px; font-size: 2.0em;}
-		height: 200px; font-size: 5em;
-		
 		text-align: center;
-
 		color: white;
-		line-height: 1.8em;
-		font-family: $FSectionTitle;
-
+		
+		@media (min-width: 900px){height: 200px; font-size: 5em;}
+		@media (min-width: 400px) and (max-width: 900px){height: 100px; font-size: 2.5em;}
+		@media (max-width: 400px){height: 80px; font-size: 2.0em;}
+		
+		h2{
+			font-family: $FSectionTitle;
+			line-height: 1.8em;
+			margin: 0;
+			font-size: 1em;
+		}
 		p{
 			font-family: $FSectionSubtitle;
 			line-height: 1.7em;
@@ -258,27 +240,19 @@ section{
 		}
 	}
 	
-	&#faq .content{
-		@media (min-width: 900px){padding: 80px 30px 80px 90px;}
-	}
-	&#register .content{
-		@media (min-width: 900px){padding: 40px 100px 40px 100px;}
-	}
-	
 	.content{
 		//Much help from http://stackoverflow.com/questions/7051768/justify-divs-with-css-to-fill-width-of-parent-container
-		vertical-align: top;
-		font-size: 1.3em;
-		margin: 0 100px 150px 100px;
-		@media (max-width: 600px){margin: 0 0 20px 0;}
+		
 		padding: 40px 40px 40px 40px;
-		@media (min-width: 900px){padding: 40px 40px 40px 100px;}
+		@media (max-width: 600px){margin: 0 0 20px 0;}
+		@media (min-width: 600px){margin: 0 100px 150px 100px;}
 		
-		opacity:0.85;
+		vertical-align: top;
 		
-		text-align:center;
-		
-		background-color:white;
+		text-align: center;
+		font-size: 1.3em;
+		background-color: white;
+		opacity: 0.9;
 		
 		#reglink{
 			display: inline-block;
@@ -308,33 +282,24 @@ section{
 				padding: 0.5em 1em 0 0;
 			}
 			@media (max-width: 700px){font-size: 0.5em;}
+			@media (min-width: 700px){font-size: 1em;}
 		}
 		
 		.box{
 			text-align: left;
 			background-color: white;
-			padding: 10px; margin: 0px;
+			padding: 10px; margin: 0;
 			font-family: Georgia, serif;
 			font-size: 0.8em;
 			vertical-align: top;
+			@media (min-width: 950px){display: inline-block; width: 280px;}//Blocky questions format
+			@media (max-width: 950px){display: block; width: 100%;}//Full-width questions format
 			
-			//Blocky questions format
-			width: 280px;
-			display: inline-block;
-			
-			&:target {
+			&:target {//Fade animation when link-targeted
 				-webkit-animation: target-fade 2s 1;
 				-moz-animation: target-fade 2s 1;
 			}
 			
-			//Full-width questions format
-			@media (max-width: 950px){
-				margin: 10px 11px 10px 9px;
-				width: 100%;
-				display: block;
-			}
-			@media (max-width: 600px){margin: 0;}
-
 			h3{
 				font-size: 1.3em;
 			}
@@ -351,21 +316,21 @@ section{
 	}
 }
 
-#contest header{background-color: $contest;}
-#faq header{background-color: $faq;}
-#schedule header{background-color: $schedule;}
-#sponsors header{background-color: $sponsors;}
-#register header{background-color: $register;}
+#faq header{background-color: $yellow;}
+#schedule header{background-color: $blue;}
+#register header{background-color: black;}
+@media (min-width: 900px){
+	#faq .content{padding: 80px 30px 80px 90px;}
+	#schedule .content{padding: 40px 40px 40px 100px;}
+	#register .content{padding: 40px 100px 40px 100px;}
+}
 
-
-#register .content{margin-bottom: 0px;}
-
+#register .content{margin-bottom: 0px;} //Footer doesn't need huge space
 footer{
 	text-align:center;
 	font-family: $FSubtitle;
-	margin: 30px;
+	margin: 40px;
 	p{
 		margin: 0px;
 	}
 }
-
