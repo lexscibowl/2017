@@ -73,12 +73,11 @@ body{
 	padding: 0; margin: 0;
 }
 
-#bgimage{
+#bgimage{ //(This positioning will be parallaxed by JQuery)
 	position: fixed; top:0; left:0; right:0; bottom:0;
 	z-index: -1000;
 	height: 200%;
 	min-width: 100%;
-	//background position center
 	opacity: 0.5;
 }
 
@@ -270,8 +269,8 @@ section{
 		//Much help from http://stackoverflow.com/questions/7051768/justify-divs-with-css-to-fill-width-of-parent-container
 		vertical-align: top;
 		font-size: 1.3em;
-		margin: 0 100px 100px 100px;
-		@media (max-width: 600px){margin: 0;}
+		margin: 0 100px 150px 100px;
+		@media (max-width: 600px){margin: 0 0 20px 0;}
 		padding: 40px 40px 40px 40px;
 		@media (min-width: 900px){padding: 40px 40px 40px 100px;}
 		
@@ -358,6 +357,8 @@ section{
 #sponsors header{background-color: $sponsors;}
 #register header{background-color: $register;}
 
+
+#register .content{margin-bottom: 0px;}
 
 footer{
 	text-align:center;
