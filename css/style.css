@@ -34,6 +34,70 @@ a.nolinkstyle {
   color: inherit;
   text-decoration: none; }
 
+.team {
+  background-color: #fff;
+  color: #000; }
+
+.ind {
+  background-color: #ccc;
+  color: #000; }
+
+.vol {
+  background-color: #222;
+  color: #fff; }
+
+.team:hover {
+  border-color: #000; }
+
+.ind:hover {
+  border-color: #000; }
+
+.vol:hover {
+  border-color: #fff; }
+
+.team, .ind, .vol {
+  border: solid 5px transparent; }
+  .team:hover, .team:active, .ind:hover, .ind:active, .vol:hover, .vol:active {
+    background-color: #fc0 !important;
+    color: #52f !important; }
+
+.reg, .regbtn, .reglink {
+  font-weight: 700;
+  font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  transition: all 0.5s;
+  text-decoration: none; }
+  @media (min-width: 600px) and (min-height: 500px) {
+    .reg, .regbtn, .reglink {
+      font-size: 2.2em; } }
+  @media (max-width: 600px), (max-height: 500px) {
+    .reg, .regbtn, .reglink {
+      font-size: 1.3em; } }
+  .reg small, .regbtn small, .reglink small {
+    display: block;
+    font-size: 0.4em; }
+
+.regbtn, .reglink {
+  padding: 0.5em 1em 0.4em 1em;
+  margin: 0.1em 0.5em;
+  width: 5em;
+  height: 2em; }
+  .regbtn small, .reglink small {
+    margin-top: 0.2em;
+    margin-bottom: -0.6em; }
+
+.reglink {
+  border: solid 1px #000;
+  padding: 0.4em 1em;
+  margin: 10px;
+  width: auto;
+  height: auto; }
+  .reglink small {
+    margin-top: -0.2em;
+    margin-bottom: 0.2em; }
+
 body {
   position: absolute;
   top: 0px;
@@ -110,6 +174,7 @@ body > header {
   height: 100%;
   text-align: center; }
   body > header #titlebox {
+    z-index: 2000;
     display: inline-block;
     position: relative;
     color: #000; }
@@ -202,38 +267,6 @@ body > header {
     @media (max-width: 600px), (max-height: 500px) {
       body > header .titlecaption2 {
         font-size: 1.8em; } }
-  body > header .bigbtn {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    padding: 0.5em 1em 0.4em 1em;
-    margin: 0.7em;
-    width: 5em;
-    height: 2em;
-    font-weight: 700;
-    font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-    transition: all 0.5s;
-    text-decoration: none; }
-    @media (min-width: 600px) and (min-height: 500px) {
-      body > header .bigbtn {
-        font-size: 2.4em; } }
-    @media (max-width: 600px), (max-height: 500px) {
-      body > header .bigbtn {
-        font-size: 1.5em; } }
-    body > header .bigbtn.vol {
-      background-color: #222;
-      color: #fff; }
-    body > header .bigbtn.reg {
-      background-color: #eee;
-      color: #000; }
-    body > header .bigbtn:hover, body > header .bigbtn:active {
-      background-color: #fc0 !important;
-      color: #52f !important; }
-    body > header .bigbtn small {
-      display: block;
-      margin-top: 0.2em;
-      margin-bottom: -0.6em;
-      font-size: 0.4em; }
 
 section header {
   width: 100%;
@@ -274,23 +307,6 @@ section .content {
   @media (min-width: 600px) {
     section .content {
       margin: 0 100px 150px 100px; } }
-  section .content #reglink {
-    display: inline-block;
-    font-size: 2em;
-    padding: 0.4em 1em;
-    font-weight: 700;
-    font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
-    background-color: #eee;
-    color: #000;
-    transition: all 0.5s;
-    text-decoration: none; }
-    section .content #reglink:hover, section .content #reglink:active {
-      background-color: #fc0;
-      color: #52f; }
-    section .content #reglink p {
-      font-size: 0.5em;
-      margin-top: -0.2em;
-      margin-bottom: 0.2em; }
   section .content table {
     margin-left: auto;
     margin-right: auto;
