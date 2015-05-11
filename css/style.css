@@ -40,6 +40,8 @@ a.nolinkstyle {
 .team {
   background-color: #fff;
   color: #000; }
+  .team span {
+    text-decoration: line-through !important; }
 
 .ind {
   background-color: #ccc;
