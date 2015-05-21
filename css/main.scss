@@ -55,17 +55,6 @@ a.nolinkstyle{
 }
 
 
-.team, .ind, .vol{border: solid 3px transparent;}
-.team{
-	background-color: #fff; color: #000;
-	span{text-decoration: line-through !important;}
-}
-.ind{background-color: #ccc; color: #000;}
-.vol{background-color: #222; color: #fff;}
-.ind:hover, .ind:active{border-color: #000;}
-.vol:hover, .vol:active{border-color: #000;}
-.ind:hover, .ind:active, .vol:hover, .vol:active{background-color: $yellow; color: $blue;}
-
 .reg{
 	font-weight: 700;
 	font-family: $FNav;
@@ -83,6 +72,9 @@ a.nolinkstyle{
 		display: block;
 		font-size: 0.4em;
 	}
+	
+	border: solid 3px transparent;
+	&:hover, &:active{border-color: #000;}
 }
 .regbtn{
 	@extend .reg;
@@ -110,6 +102,9 @@ a.nolinkstyle{
 		margin-bottom: 0.2em;
 	}
 }
+.blackonwhite{background-color: #ddd; color: #000;}
+.whiteonblack{background-color: #222; color: #fff;}
+.blueonyellowhov:hover, .blueonyellowhov:active{background-color: $yellow; color: $blue;}
 
 
 body{
