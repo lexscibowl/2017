@@ -90,7 +90,8 @@ a.nolinkstyle{
 .reglink{
 	@extend .regbtn;
 	
-	border: solid 1px #000;
+	outline: solid 1px #000;
+	border: solid 4px transparent;
 	
 	padding: 0.4em 1em;
 	margin: 10px;
@@ -100,6 +101,8 @@ a.nolinkstyle{
 		margin-top: -0.2em;
 		margin-bottom: 0.2em;
 	}
+	
+	&:hover{border-color: #000;outline: solid 1px #000;}
 }
 .blackonwhite{background-color: #ddd; color: #000;}
 .whiteonblack{background-color: #222; color: #fff;}
@@ -328,47 +331,15 @@ section{
 #faq header{background-color: $yellow;}
 //#schedule header{background-color: $blue;}
 #sponsors header{background-color: $blue;}
-#subscribe header{background-color: black;}
+#register header{background-color: black;}
 #faq .content{text-align:center;}
 @media (min-width: 900px){
 	#faq .content{padding: 80px 30px 80px 0px; border-left: solid 85px rgba(0,0,0,0.1);}
-	#schedule .content, #sponsors .content, #subscribe .content{padding: 40px; border-left: solid 85px #ccc;}
-}
-
-/****MailChimp Signup Form****/
-#mce-EMAIL{
-	width: 100%;
-	font-size: 1.5em;
-	padding: 0.25em;
-	text-align:center;
-	border: solid 2px $yellow;
-}
-#mce-EMAIL:focus{
-	border-color: $blue;
-	outline: auto 5px $blue;
-}
-div.clear{
-	text-align:center;
-}
-#mc-embedded-subscribe{
-	margin-top: 0.2em;
-	font-size: 1.5em;
-	padding: 0.25em 3em;
-	font-family: "Quicksand";
-	font-weight: 700;
-	border: solid 1px #000;
-	border-radius: 4px;
-	background-color: white;
-	color: black;
-	transition:all 0.5s;
-}
-#mc-embedded-subscribe:hover{
-	background-color: $yellow;
-	color: $blue;
+	#schedule .content, #sponsors .content, #register .content{padding: 40px; border-left: solid 85px #ccc;}
 }
 
 
-#subscribe .content{margin-bottom: 0px;} //Footer doesn't need huge space
+#register .content{margin-bottom: 0px;} //Footer doesn't need huge space
 footer{
 	text-align:center;
 	font-family: $FSubtitle;
