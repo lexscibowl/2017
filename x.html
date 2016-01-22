@@ -1,0 +1,146 @@
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Poiret+One&amp;subset=latin" rel="stylesheet" type="text/css">
+<style>
+html, body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+.splash-wrap{
+	position:relative;
+	height: 100vh;
+	width: 100vw;
+	overflow:hidden;
+	font-size:8vmin;
+}
+.splash{
+	position: absolute;
+	left:0; right:0; top:0; bottom:0;
+	transform: rotate(-10deg) translateY(-1em);
+	font-family: Poiret One, Arial;
+}
+.splash-info{
+	position: absolute;
+	left: 45vw;
+	top: 50vh;
+	font-family: Quicksand, Arial;
+	width: 50vw;
+	font-size: 0.5em;
+	text-align:center;
+}
+.caption{
+	font-weight: bold;
+}
+.datetime{
+	margin-top:0.5em;
+	font-size: 1.2em;
+}
+.regbtn{
+	display: inline-block;
+	background-color: #eee;
+	color:black;
+	text-decoration: none;
+	border: solid 1vmin transparent;
+	font-weight: bold;
+	text-align:center;
+	padding:0.5em 1em;
+	transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+	margin:1em;
+}
+.regbtn:hover{
+	background-color: #fc0;
+	color: #52f;
+	border-color: black;
+}
+.regbtn small{
+	display: block;
+}
+.uppertriangle, .lowertriangle{
+	z-index: -1000;
+	position:absolute;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+.uppertriangle{
+	top:-5em;
+	left:-5em;
+	border-width: 10em 10em 0 10em;
+	border-top-color: #fc0;
+}
+.lowertriangle{
+	top:5em;
+	left:-5em;
+	border-width: 0 10em 10em 10em;
+	border-bottom-color: #000;
+}
+.title{
+	top: 1em;
+	position:absolute;
+	margin:0;
+	left: 0.4em;
+	font-size: 3em;
+}
+.title .lex{
+	color: #52f;
+}
+.title .hiddenx{
+	color: transparent;
+}
+.title .sci{
+	color: #fc0;
+	padding-left:0.5em;
+}
+.x{
+	position: absolute;
+	top:5em;
+	left:5em;
+	z-index: 1000;
+	transform: rotate(45deg);
+}
+.x:before, .x:after{
+	display:block;
+	position: absolute;
+	content:"";
+	height: 4em;
+	width: 4em;
+}
+.x:before{
+	border-right: solid 0.5em #52f;
+	border-bottom: solid 0.5em #52f;
+	top:-4em;
+	left:-4em;
+	margin-top:-0.25em;
+	margin-left:-0.25em;
+}
+.x:after{
+	border-left: solid 0.5em #52f;
+	border-top: solid 0.5em #52f;
+	top:-0.25em;
+	left:-0.25em;
+}
+</style>
+<div class="splash-wrap">
+	<div class="splash">
+		<h1 class="title"><span class="lex">Le<span class="hiddenx">x</span></span><span class="sci">Sci</span>Bowl</h1>
+		<div class="x"></div>
+		<div class="uppertriangle"></div>
+		<div class="lowertriangle"></div>
+	</div>
+	<div class="splash-info">
+		<div class="caption">The student-run middle school<br>science bowl and olympiad</div>
+		<div class="datetime">April 2, 2016 @ <a href="https://www.google.com/maps/place/Lexington+High+School/" rel="external">Lexington High School</a>.</div>
+		<a class="regbtn" href="#register">Register<small>Deadline March 5</small></a>
+	</div>
+</div>
+<section id="about">
+	<header>
+	About
+	</header>
+</section>
+hello<br>
+hello<br>
+hello<br>
+hello<br>
+hello<br>
+hello<br>
