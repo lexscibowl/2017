@@ -111,8 +111,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1000;
-  height: 200%;
-  min-width: 100%;
+  width: 100%;
   opacity: 0.5; }
 
 nav {
