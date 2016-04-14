@@ -359,6 +359,9 @@ section .content {
 #register header {
   background-color: black; }
 
+#archive header {
+  background-color: black; }
+
 #faq .content {
   text-align: center; }
 
