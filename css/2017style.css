@@ -75,8 +75,8 @@ a.nolinkstyle {
   width: auto;
   height: auto; }
   .reglink small {
-    margin-top: -0.2em; 
-    margin-bottom: 0.2em; } 
+    margin-top: -0.2em;
+    margin-bottom: 0.2em; }
   .reglink:hover {
     border-color: #000;
     outline: solid 1px #000; }
@@ -258,12 +258,80 @@ body > header {
     font-weight: 400; }
     @media (min-width: 600px) and (min-height: 500px) {
       body > header .titlecaption2 {
-        font-size: 2.2em; } } /*was 2.6*/
+        font-size: 2.6em; } }
     @media (max-width: 600px), (max-height: 500px) {
       body > header .titlecaption2 {
         font-size: 1.8em; } }
 
-section header {
+/* Header Styles
+---------------------------------*/
+
+#header_outer{
+	background:#ffffff;
+	padding:30px 0px;
+	}
+
+.header_section{
+	position:relative;
+	}
+	
+.logo{
+	float:left;
+	}
+	
+.res-nav_click{ display:none;}
+	
+
+/* Nav Styles
+---------------------------------*/
+	
+.nav{
+	float:right;
+	}
+	
+.nav ul{
+	list-style:none;
+	padding:0px;
+	}
+.nav ul.toggle{
+	display:none;
+	visibility:hidden;
+	height:0px;
+	overflow:hidden;
+	margin-bottom: 0;
+	}
+	
+.nav ul li{
+	display:inline-block;
+	margin:0 23px;
+	}
+	
+.nav ul li:first-child{
+	/*margin:0px;*/
+	}
+	
+.nav ul li:last-child{
+	margin:0 0 0 23px;
+	}
+	
+.nav ul li a{
+	display:block;
+	font-size:14px;
+	color:#222222;
+	font-family:'Dosis';
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight: 600;
+	transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;	
+	}
+.nav ul li a:hover{
+	color:#49b5e7;
+	}
+
+
+/*section header {
   width: 100%;
   text-align: center;
   color: white; }
@@ -288,7 +356,7 @@ section header {
     font-family: "Quicksand", "Segoe UI", "Open Sans", "Lucida Grande", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
     line-height: 1.7em;
     margin: -0.8em 0 0 0;
-    font-size: 0.4em; }
+    font-size: 0.4em; }*/
 section .content {
   padding: 40px 40px 40px 40px;
   vertical-align: top;
@@ -344,10 +412,7 @@ section .content {
       font-size: 0.9em;
       line-height: 1.7em; }
 
-#about header {
-  background-color: #52f;; } /*change later*/
-
-#faq header {
+/*#faq header {
   background-color: #fc0; }
 
 #team header {
@@ -357,16 +422,16 @@ section .content {
   background-color: #fc0; }
 
 #sponsors header {
-  background-color: black; }
+  background-color: #52f; }
 
 #register header {
   background-color: black; }
 
 #archive header {
-  background-color: #fc0; }
+  background-color: black; }
 
 #faq .content {
-  text-align: center; }
+  text-align: center; }*/
 
 @media (min-width: 900px) {
   #faq .content {
